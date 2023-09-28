@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "lepka";
+  src: url('/fonts/LEPKA.otf');
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  src: url('/fonts/Suisse Intl/SuisseIntl-Regular.otf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "SuisseIntl";
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+
