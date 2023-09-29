@@ -21,12 +21,12 @@ const FirstSection:React.FC<FirstSectionProps> =()=> {
   return (
     <section className='w-full pt-44 max-md:pt-36 relative flex justify-between max-2xl:items-center max-2xl:flex-col-reverse max-2xl:gap-72 max-lg:gap-56 max-sm:gap-24 min-h-screen'>
 			
-		    <div className='bg-[#F5CB5B] w-1/2 max-2xl:w-[70%] absolute top-0 -right-[11%] min-h-screen max-2xl:min-h-[90vh] max-lg:min-h-[73vh]  max-sm:w-[85%] max-sm:min-h-[55vh]'></div>
+		    <div className='bg-[#53C9ED] w-1/2 max-2xl:w-[70%] absolute top-0 -right-[11%] min-h-screen max-2xl:min-h-[90vh] max-lg:min-h-[73vh]  max-sm:w-[85%] max-sm:min-h-[55vh]'></div>
 
 			<div className="w-full flex flex-col max-2xl:flex-col-reverse gap-10 items-start">
 			    <div className="w-[80%] max-2xl:w-1/2 max-lg:w-[70%] max-sm:w-[90%]">
-                    <h1 className="font-bold flex gap-4 leading-tight text-5xl max-lg:text-4xl max-md:text-3xl max-sm:text-3xl tracking-widest font-['lepka']">
-			    		ALL YOU NEED LOVE AND ICE CREAM
+                    <h1 className="font-bold gap-4 leading-tight text-5xl max-lg:text-4xl max-md:text-3xl max-sm:text-3xl tracking- font-['lepka']">
+			    		ALL YOU NEED <span className='text-[#014EA1] font-["lepka"]'>LOVE AND ICE CREAM</span>
 			    	</h1>
 			    	<p className="mt-5 font-medium text-lg max-sm:text-base">
 			    		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
