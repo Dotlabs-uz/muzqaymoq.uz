@@ -26,4 +26,15 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.swiper{
+  padding: 0 10px 0 10px !important;
+  margin: 0 0 20px 0 !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .swiper{
+    padding: 0 5px 0 5px !important;
+  }
+}
+
 
