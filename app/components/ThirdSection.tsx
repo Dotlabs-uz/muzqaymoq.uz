@@ -13,6 +13,7 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
         <section className="mt-20">
             <h2 className='text-4xl font-["lepka"]'>Popular product</h2>
 
+
             <div className="relative mt-5">
                 <Swiper
                     className="w-[120vw]"
