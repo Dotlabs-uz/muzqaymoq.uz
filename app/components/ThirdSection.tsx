@@ -17,7 +17,7 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                 <Swiper
                     className="w-[120vw]"
                     spaceBetween={20}
-                    slidesPerView={3}
+                    slidesPerView={4}
                     breakpoints={{
                         1536: {
                             spaceBetween: 20,
@@ -25,17 +25,17 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                         1024: {
                             slidesPerView: 4,
                         },
-                        640: {
+                        700: {
                             slidesPerView: 3,
                             spaceBetween: 10,
                         },
-                        200:{
+                        200: {
                             slidesPerView: 2,
-                        }
+                        },
                     }}
                 >
                     <SwiperSlide className="mb-5">
-                        <div className="h-[50vh] max-xl:h-[40vh] max-lg:h-[35vh] rounded-3xl overflow-hidden">
+                        <div className="h-[50vh] max-xl:h-[40vh] max-lg:h-[35vh] max-sm:h-[25vh] rounded-3xl overflow-hidden">
                             <Image
                                 src={"/image/section3.png"}
                                 alt=""
@@ -60,7 +60,7 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="">
-                        <div className="h-[50vh] max-xl:h-[40vh] max-lg:h-[35vh] rounded-3xl overflow-hidden">
+                        <div className="h-[50vh] max-xl:h-[40vh] max-lg:h-[35vh] max-sm:h-[25vh] rounded-3xl overflow-hidden">
                             <Image
                                 src={"/image/section3.png"}
                                 alt=""
@@ -85,7 +85,32 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="">
-                        <div className="h-[50vh] max-xl:h-[40vh] max-lg:h-[35vh] rounded-3xl overflow-hidden">
+                        <div className="h-[50vh] max-xl:h-[40vh] max-lg:h-[35vh] max-sm:h-[25vh] rounded-3xl overflow-hidden">
+                            <Image
+                                src={"/image/section3.png"}
+                                alt=""
+                                width={100}
+                                height={100}
+                                className="h-full w-full"
+                            />
+                        </div>
+                        <p className="mt-3 text-2xl max-md:text-xl max-sm:text-lg font-semibold">
+                            John Devson
+                        </p>
+                        <div className="flex items-center gap-5 mt-2">
+                            <p className="text-xl max-md:text-lg max-sm:text-base">
+                                $56.00
+                            </p>
+                            <Image
+                                src={"/image/section3-stars.png"}
+                                alt={""}
+                                width={150}
+                                height={100}
+                            />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className="">
+                        <div className="h-[50vh] max-xl:h-[40vh] max-lg:h-[35vh] max-sm:h-[25vh] rounded-3xl overflow-hidden">
                             <Image
                                 src={"/image/section3.png"}
                                 alt=""
