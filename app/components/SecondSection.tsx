@@ -9,10 +9,10 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
   return (
     <section className='flex max-lg:flex-col items-center justify-between mt-20 max-sm:mt-10 w-full gap-40 max-xl:gap-20 max-lg:gap-28 max-md:gap-20 max-lg:items-start'>
         <div className='w-full max-lg:w-3/4 max-md:w-full max-sm:w-[90%] m-auto h-auto relative'>
-            <Image src={'/image/section2.png'} alt="" width={100} height={100} className={"w-full h-full"}/>
+            <Image src={'/image/section2.svg'} alt="" width={100} height={100} className={"w-full h-full"}/>
 
             <Image 
-			  src={'/image/section2-ice-cream.png'} 
+			  src={'/image/section2-ice-cream.svg'} 
 			  alt="" 
 			  width={100} 
 			  height={100} 

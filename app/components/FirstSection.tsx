@@ -61,18 +61,13 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                                     1536: {
                                         spaceBetween: 20,
                                      },
-                                     1920: {
-                                        slidesPerView: 3,
+                                    1024: {
+                                        spaceBetween: 10,
                                      },
-                                     1280: {
-                                        slidesPerView: 3,
-                                     },
-                                     768: {
-                                        slidesPerView: 3,
+                                    768: {
                                         spaceBetween: 10,
                                      },
                                      0: {
-                                        slidesPerView: 2,
                                         spaceBetween: 5
                                      },
                                 }
