@@ -17,11 +17,11 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                 <Swiper
                     className="w-[120vw]"
                     spaceBetween={20}
-                    slidesPerView={4}
+                    slidesPerView={6}
                     breakpoints={{
-                        // 1024: {
-                        //     slidesPerView: 4,
-                        // },
+                        1568:{
+                            slidesPerView: 4,
+                        },
                         769: {
                             slidesPerView: 4,
                         },

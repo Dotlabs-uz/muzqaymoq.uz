@@ -19,7 +19,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
     };
 
     return (
-        <section className="w-full pt-44 relative flex max-lg:flex-col-reverse justify-between ">
+        <section className="w-full pt-44 relative flex max-lg:flex-col-reverse justify-between">
             <div className="bg-[#53C9ED] w-[60%] max-lg:w-[80%]  absolute top-0 -right-[17%] min-h-[100vh] max-sm:min-h-[460px]"></div>
 
             <div className="w-full flex flex-col gap-10 max-2xl:gap-5 max-sm:gap-2 items-start">
@@ -53,7 +53,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                     <div className="flex items-center gap-5">
                         <div className="relative mt-5">
                             <Swiper
-                                className="w-[40vw] max-lg:w-[100vw]"
+                                className="w-[40vw] max-w-[800px] max-lg:w-[100vw]"
                                 onSwiper={(swiper: any) => setSwiperRef(swiper)}
                                 spaceBetween={20}
                                 slidesPerView={2}
@@ -176,7 +176,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                         width={100}
                         height={100}
                         alt=""
-                        className="w-[1000px] h-[100vh] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[55%] left-[35%] max-2xl:left-[32%] max-xl:left-[28%] max-lg:left-0 max-lg:top-[35%] max-md:h-[85vh] max-md:top-[35%] max-sm:h-[400px] max-sm:w-[400px] max-sm:top-[75px] -translate-y-1/2 "
+                        className="w-[990px] h-[98vh] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[55%] left-[35%] max-2xl:left-[32%] max-xl:left-[28%] max-lg:left-0 max-lg:top-[35%] max-md:h-[85vh] max-md:top-[35%] max-sm:h-[400px] max-sm:w-[400px] max-sm:top-[75px] -translate-y-1/2 "
                     />
                 </div>
                 <div className="w-full h-auto text-white z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px] max-sm:-translate-y-16 max-[400px]:-translate-y-7">
