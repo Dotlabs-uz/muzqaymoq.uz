@@ -9,21 +9,22 @@ import Footer from "./components/Footer";
 export default function Home() {
     return (
         <>
-        <main className="max-w-[1920px] m-auto relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] bg-[#E9EDDF] px-24 max-[1330px]:px-16 max-sm:px-7 overflow-hidden">
-            <Header />
+            <main className="bg-[#E9EDDF] overflow-hidden">
+                <div className="max-w-[1920px] m-auto relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] px-24 max-[1330px]:px-16 max-sm:px-7">
+                    <Header />
 
-            <FirstSection />
+                    <FirstSection />
 
-            <SecondSection />
+                    <SecondSection />
 
-            <ThirdSection />
+                    <ThirdSection />
 
-            <FourthSection />
+                    <FourthSection />
 
-            <FifthSection />
-
-        </main>
-        <Footer/>
+                    <FifthSection />
+                </div>
+            <Footer />
+            </main>
         </>
     );
 }

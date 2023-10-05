@@ -19,41 +19,41 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
     };
 
     return (
-        <section className="w-full pt-44 max-md:pt-36 relative flex justify-between max-2xl:items-center max-2xl:flex-col-reverse max-2xl:gap-72 max-lg:gap-56 max-sm:gap-24 min-h-screen">
-            <div className="bg-[#53C9ED] w-1/2 max-2xl:w-[70%] absolute top-0 -right-[11%] min-h-screen max-2xl:min-h-[90vh] max-lg:min-h-[73vh]  max-sm:w-[85%] max-sm:min-h-[55vh]"></div>
+        <section className="w-full pt-44 relative flex max-lg:flex-col-reverse justify-between ">
+            <div className="bg-[#53C9ED] w-[60%] max-lg:w-[80%]  absolute top-0 -right-[17%] min-h-[100vh] max-sm:min-h-[460px]"></div>
 
-            <div className="w-full flex flex-col max-2xl:flex-col-reverse gap-10 items-start">
-                <div className="w-[80%] max-2xl:w-1/2 max-lg:w-[70%] max-sm:w-[90%]">
-                    <h1 className="font-bold gap-4 leading-tight text-5xl max-lg:text-4xl max-md:text-3xl max-sm:text-3xl tracking- font-['lepka']">
+            <div className="w-full flex flex-col gap-10 max-2xl:gap-5 max-sm:gap-2 items-start">
+                <div className="w-[80%] max-xl:w-[65%] max-lg:w-[50%] max-sm:w-full">
+                    <h1 className="font-bold gap-4 leading-tight text-5xl max-xl:text-4xl max-md:text-3xl font-['lepka']">
                         ALL YOU NEED
                         <span className='text-[#014EA1] font-["lepka"]'>
                             LOVE AND ICE CREAM
                         </span>
                     </h1>
-                    <p className="mt-5 font-medium text-lg max-sm:text-base">
+                    <p className="mt-5 font-medium text-lg max-md:text-base">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                     </p>
-                    <button className="flex items-center gap-7 bg-black text-white px-14 py-4 max-md:px-10 max-md:py-3 max-sm:px-8 max-sm:py-2 rounded-full mt-6">
+                    <button className="flex items-center max-md:text-sm gap-7 bg-black text-white px-14 py-4 max-xl:px-10 max-xl:py-3 max-lg:px-8 max-lg:py-2 rounded-full mt-6">
                         Купить сейчас
                         <Image
                             src={"/icons/to-right-icon.png"}
-                            className="rotate-90"
+                            className="rotate-90 max-md:w-2"
                             width={12}
                             height={10}
                             alt=""
                         />
                     </button>
                 </div>
-                <div className="mt-10 max-2xl:mt-0 w-full relative">
-                    <p className="text-lg max-2xl:text-2xl max-xl:text-xl font-semibold">
+                <div className="mt-10 max-2xl:mt-5 max-xl:mt-10 max-sm:mt-5 w-full relative">
+                    <p className="text-lg font-semibold">
                         You mignt love Ice cream:
                     </p>
                     <div className="flex items-center gap-5">
                         <div className="relative mt-5">
                             <Swiper
-                                className="w-[600px] max-2xl:w-[100vw]"
+                                className="w-[40vw] max-lg:w-[100vw]"
                                 onSwiper={(swiper: any) => setSwiperRef(swiper)}
                                 spaceBetween={20}
                                 slidesPerView={2}
@@ -63,133 +63,140 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                                      },
                                     1024: {
                                         spaceBetween: 10,
+                                        slidesPerView:2
                                      },
                                     768: {
                                         spaceBetween: 10,
+                                        slidesPerView:3
+                                     },
+                                     400:{
+                                        slidesPerView:2
                                      },
                                      0: {
-                                        spaceBetween: 5
+                                        spaceBetween: 5,
+                                        slidesPerView:2
                                      },
                                 }
                                 }
                             >
-                                <SwiperSlide className="mb-5">
-                                    <div className="flex gap-5 items-center shadow-lg rounded-3xl p-5 max-sm:p-3 cursor-pointer z-10">
+                                <SwiperSlide className="mb-16">
+                                    <div className="flex gap-5 max-xl:gap-2 items-center shadow-lg rounded-3xl p-5 max-sm:p-3 cursor-pointer z-10">
                                         <Image
                                             src={"/image/ice-cream-2.png"}
                                             width={100}
                                             height={100}
                                             alt=""
-                                            className="max-sm:w-[70px]"
+                                            className="max-2xl:w-[70px] max-xl:w-[60px]"
                                         />
-                                        <div className="flex flex-col max-sm:text-xs gap-2">
+                                        <div className="flex flex-col max-xl:text-sm max-sm:text-xs gap-2 max-xl:gap-1">
                                             <p className="font-bold">
                                                 Сhoco vanilla Ice Cream
                                             </p>
                                             <p>2 Scoops</p>
-                                            <p className="font-black text-lg max-md:text-base">
+                                            <p className="font-black text-lg max-xl:text-base max-sm:text-xs">
                                                 $75
                                             </p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
-                                <SwiperSlide className="">
-                                    <div className="flex gap-5 items-center shadow-lg rounded-3xl p-5 max-sm:p-3 cursor-pointer z-10">
+                                <SwiperSlide className="mb-16">
+                                    <div className="flex gap-5 max-xl:gap-2 items-center shadow-lg rounded-3xl p-5 max-sm:p-3 cursor-pointer z-10">
                                         <Image
                                             src={"/image/ice-cream-2.png"}
                                             width={100}
                                             height={100}
                                             alt=""
-                                            className="max-sm:w-[70px]"
+                                            className="max-2xl:w-[70px] max-xl:w-[60px]"
                                         />
-                                        <div className="flex flex-col max-sm:text-xs gap-2">
+                                        <div className="flex flex-col max-xl:text-sm max-sm:text-xs gap-2 max-xl:gap-1">
                                             <p className="font-bold">
                                                 Сhoco vanilla Ice Cream
                                             </p>
                                             <p>2 Scoops</p>
-                                            <p className="font-black text-lg max-md:text-base">
+                                            <p className="font-black text-lg max-xl:text-base max-sm:text-xs">
                                                 $75
                                             </p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
-                                <SwiperSlide className="">
-                                    <div className="flex gap-5 items-center shadow-lg rounded-3xl p-5 max-sm:p-3 cursor-pointer z-10">
+                                <SwiperSlide className="mb-16">
+                                    <div className="flex gap-5 max-xl:gap-2 items-center shadow-lg rounded-3xl p-5 max-sm:p-3 cursor-pointer z-10">
                                         <Image
                                             src={"/image/ice-cream-2.png"}
                                             width={100}
                                             height={100}
                                             alt=""
-                                            className="max-sm:w-[70px]"
+                                            className="max-2xl:w-[70px] max-xl:w-[60px]"
                                         />
-                                        <div className="flex flex-col max-sm:text-xs gap-2">
+                                        <div className="flex flex-col max-xl:text-sm max-sm:text-xs gap-2 max-xl:gap-1">
                                             <p className="font-bold">
                                                 Сhoco vanilla Ice Cream
                                             </p>
                                             <p>2 Scoops</p>
-                                            <p className="font-black text-lg max-md:text-base">
+                                            <p className="font-black text-lg max-xl:text-base max-sm:text-xs">
                                                 $75
                                             </p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="flex gap-5 items-center shadow-lg rounded-3xl p-5 max-sm:p-3 cursor-pointer z-10">
+                                <SwiperSlide className="mb-16">
+                                    <div className="flex gap-5 max-xl:gap-2 items-center shadow-lg rounded-3xl p-5 max-sm:p-3 cursor-pointer z-10">
                                         <Image
                                             src={"/image/ice-cream-2.png"}
                                             width={100}
                                             height={100}
                                             alt=""
-                                            className="max-sm:w-[70px]"
+                                            className="max-2xl:w-[70px] max-xl:w-[60px]"
                                         />
-                                        <div className="flex flex-col max-sm:text-xs gap-2">
+                                        <div className="flex flex-col max-xl:text-sm max-sm:text-xs gap-2 max-xl:gap-1">
                                             <p className="font-bold">
                                                 Сhoco vanilla Ice Cream
                                             </p>
                                             <p>2 Scoops</p>
-                                            <p className="font-black text-lg max-md:text-base">
+                                            <p className="font-black text-lg max-xl:text-base max-sm:text-xs">
                                                 $75
                                             </p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
+                                <SwiperSlide></SwiperSlide>
                             </Swiper>
                         </div>
-                        <div onClick={nextHandler} className="p-3 max-2xl:hidden rounded-full shadow-xl flex items-center justify-center cursor-pointer  z-50">
+                        <div onClick={nextHandler} className="w-[50px] h-[50px] p-4 rounded-full shadow-xl flex items-center justify-center cursor-pointer  z-50">
                             <Image src={"/icons/to-right-icon2.png"} width={100} height={100} alt="" className="w-full h-full"/>
 			    		</div>
                     </div>
                 </div>
             </div>
 
-            <div className="w-full flex items-start justify-between max-2xl:justify-center">
-                <div className="w-full h-full z-10 max-2xl:relative">
+            <div className="w-full flex max-lg:gap-40 max-sm:gap-20 items-start max-lg:translate-y-10 max-lg:h-[80vh] max-sm:h-[50vh] justify-between">
+                <div className="w-full h-full z-10 ">
                     <Image
                         src={"/image/Ice.svg"}
                         width={100}
                         height={100}
                         alt=""
-                        className="w-[900px] h-[90vh] absolute top-1/2 left-[40%] -translate-y-1/2 max-2xl:-translate-y-[110px] max-2xl:left-1/2 max-2xl:-translate-x-[23%] max-xl:min-w-[1000px] max-lg:min-w-[580px] max-lg:h-[73vh] max-lg:-translate-y-[12vh] max-md:-translate-y-[8vh]  max-sm:min-w-[400px] max-sm:h-[60vh] max-sm:-translate-x-[30%] max-sm:-translate-y-[19%]"
+                        className="w-[1000px] h-[100vh] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[55%] left-[35%] max-2xl:left-[32%] max-xl:left-[28%] max-lg:left-0 max-lg:top-[35%] max-md:h-[85vh] max-md:top-[35%] max-sm:h-[400px] max-sm:w-[400px] max-sm:top-[75px] -translate-y-1/2 "
                     />
                 </div>
-                <div className="w-full h-auto max-2xl:w-1/2 max-2xl:text-xl max-2xl:font-bold max-lg:font-medium max-lg:text-lg max-sm:text-base max-sm:pt-10 text-white z-10">
+                <div className="w-full h-auto text-white z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px] max-sm:-translate-y-16 max-[400px]:-translate-y-7">
                     <div className="flex items-start gap-3">
                         <Image
                             src={"/icons/Vector1.png"}
                             width={100}
                             height={10}
                             alt=""
-                            className="max-sm:w-10"
+                            className="max-sm:w-10 max-md:w-20"
                         />
-                        <div className="flex gap-10">
-                            <div className="flex flex-col items-start gap-3">
+                        <div className="flex gap-10 max-sm:gap-5">
+                            <div className="flex flex-col items-start gap-3 max-sm:gap-2">
                                 <p>Calorie</p>
                                 <p>Total fat</p>
                                 <p>Protein</p>
                                 <p>Vt.D</p>
                                 <p>Calcium</p>
                             </div>
-                            <div className="flex flex-col items-start gap-3 max-sm:hidden">
+                            <div className="flex max-sm:hidden flex-col items-start gap-3">
                                 <p>210</p>
                                 <p>10%</p>
                                 <p>1g</p>
@@ -198,13 +205,13 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center gap-3 mt-20 max-2xl:mt-40 max-lg:mt-10 max-sm:mt-6">
+                    <div className="flex items-center gap-3 mt-20 max-sm:mt-5 max-[400px]:mt-2">
                         <Image
                             src={"/icons/Vector1.png"}
                             width={100}
                             height={10}
                             alt=""
-                            className="max-sm:w-10"
+                            className="max-md:w-20 max-sm:w-10"
                         />
                         Available Size
                     </div>
