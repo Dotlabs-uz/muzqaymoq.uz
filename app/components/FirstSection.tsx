@@ -20,9 +20,9 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
 
     return (
         <section className="w-full pt-44 relative flex max-lg:flex-col-reverse justify-between">
-            <div className="bg-[#53C9ED] w-[60%] max-lg:w-[80%]  absolute top-0 -right-[17%] min-h-[100vh] max-sm:min-h-[460px]"></div>
+            <div className="bg-[#53C9ED] w-[60%] max-h-[800px] max-lg:w-[80%]  absolute top-0 -right-[17%] min-h-[100vh] max-sm:min-h-[460px]"></div>
 
-            <div className="w-full flex flex-col gap-10 max-2xl:gap-5 max-sm:gap-2 items-start">
+            <div className="w-full flex flex-col gap-10 max-lg:flex-col-reverse max-2xl:gap-5 max-sm:gap-2 items-start">
                 <div className="w-[80%] max-xl:w-[65%] max-lg:w-[50%] max-sm:w-full">
                     <h1 className="font-bold gap-4 leading-tight text-5xl max-xl:text-4xl max-md:text-3xl font-['lepka']">
                         ALL YOU NEED
@@ -46,7 +46,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                         />
                     </button>
                 </div>
-                <div className="mt-10 max-2xl:mt-5 max-xl:mt-10 max-sm:mt-5 w-full relative">
+                <div className="mt-10 max-2xl:mt-5 max-xl:mt-10 max-sm:mt-0 w-full relative">
                     <p className="text-lg font-semibold">
                         You mignt love Ice cream:
                     </p>
