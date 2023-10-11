@@ -23,7 +23,7 @@ export default function Home() {
 
                     <FifthSection />
                 </div>
-            <Footer />
+                <Footer />
             </main>
         </>
     );
