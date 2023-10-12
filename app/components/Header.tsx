@@ -4,6 +4,26 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { motion, useCycle } from "framer-motion";
 
+const sidebar = {
+    open: (height = 1000) => ({
+      clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+      transition: {
+        type: "spring",
+        stiffness: 20,
+        restDelta: 2
+      }
+    }),
+    closed: {
+      clipPath: "circle(30px at 40px 40px)",
+      transition: {
+        delay: 0.5,
+        type: "spring",
+        stiffness: 400,
+        damping: 40
+      }
+    }
+  };
+
 function Header() {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
@@ -37,14 +57,15 @@ function Header() {
             </header>
             <motion.div
                 initial={
-                    isOpen ? { x: "-100%", opacity: 1 } : { x: 0, opacity: 1 }
+                   false
                 }
                 animate={
-                    isOpen ? { x: 0, opacity: 1 } : { x: "-100%", opacity: 1 }
+                    isOpen ? "open" : "closed"
                 }
                 transition={{ delay: 0, ease: "easeIn", duration: 0.5 }}
+                variants={sidebar}
                 className={
-                    "hidden max-lg:block fixed z-40 left-0  w-full h-screen bg-[#CFCDCB] -translate-x-[100%]"
+                    "hidden max-lg:block fixed z-40 left-0  w-full h-screen bg-[#CFCDCB]"
                 }
             >
                 <div className="pt-32 pl-10 text-4xl font-black flex flex-col h-[85vh] items-start justify-between">
