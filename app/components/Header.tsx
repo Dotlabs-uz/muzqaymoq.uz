@@ -6,30 +6,39 @@ import { motion, useCycle } from "framer-motion";
 
 const sidebar = {
     open: (height = 1000) => ({
-      clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-      transition: {
-        type: "spring",
-        stiffness: 20,
-        restDelta: 2
-      }
+        clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+        transition: {
+            type: "spring",
+            stiffness: 20,
+            restDelta: 2,
+        },
     }),
     closed: {
-      clipPath: "circle(30px at 40px 40px)",
-      transition: {
-        delay: 0.5,
-        type: "spring",
-        stiffness: 400,
-        damping: 40
-      }
-    }
-  };
+        clipPath: "circle(30px at 40px 40px)",
+        transition: {
+            delay: 0.5,
+            type: "spring",
+            stiffness: 400,
+            damping: 40,
+        },
+    },
+};
 
 function Header() {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
     return (
         <>
-            <header className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-10 pb-5 w-full  absolute max-lg:fixed top-0 left-0 max-lg:bg-white flex items-center justify-between gap-5">
+            <motion.header
+                initial={{ y: -40 }}
+                animate={{ y: 0 }}
+                transition={{
+                    delay: 0,
+                    ease: "backOut",
+                    duration: 1,
+                }}
+                className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-10 pb-5 w-full  absolute max-lg:fixed top-0 left-0 max-lg:bg-white flex items-center justify-between gap-5"
+            >
                 <div className="flex pr-24 max-[1330px]:pr-0 items-center gap-7 w-[60%] max-lg:w-full justify-between">
                     <GiHamburgerMenu
                         size={30}
@@ -54,14 +63,10 @@ function Header() {
                         </Link>
                     </div>
                 </div>
-            </header>
+            </motion.header>
             <motion.div
-                initial={
-                   false
-                }
-                animate={
-                    isOpen ? "open" : "closed"
-                }
+                initial={false}
+                animate={isOpen ? "open" : "closed"}
                 transition={{ delay: 0, ease: "easeIn", duration: 0.5 }}
                 variants={sidebar}
                 className={

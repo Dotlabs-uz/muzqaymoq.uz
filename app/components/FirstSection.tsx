@@ -25,18 +25,45 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
 
             <div className="w-full flex flex-col gap-10 max-lg:flex-col-reverse max-2xl:gap-5 max-sm:gap-2 items-start">
                 <div className="w-[80%] max-xl:w-[65%] max-lg:w-[50%] max-sm:w-full">
-                    <h1 className="font-bold gap-4 leading-tight text-5xl max-xl:text-4xl max-md:text-3xl font-['lepka']">
+                    <motion.h1
+                        initial={{ x: "-120%" }}
+                        animate={{ x: 0 }}
+                        transition={{
+                            delay: 0.3,
+                            ease: "backOut",
+                            duration: 2,
+                        }}
+                        className="font-bold gap-4 leading-tight text-5xl max-xl:text-4xl max-md:text-3xl font-['lepka']"
+                    >
                         ALL YOU NEED
                         <span className='text-[#014EA1] font-["lepka"]'>
                             LOVE AND ICE CREAM
                         </span>
-                    </h1>
-                    <p className="mt-5 font-medium text-lg max-md:text-base">
+                    </motion.h1>
+                    <motion.p
+                        initial={{ x: "-120%" }}
+                        animate={{ x: 0 }}
+                        transition={{
+                            delay: 0.6,
+                            ease: "backOut",
+                            duration: 2,
+                        }}
+                        className="mt-5 font-medium text-lg max-md:text-base"
+                    >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
-                    </p>
-                    <button className="flex items-center max-md:text-sm gap-7 bg-black text-white px-14 py-4 max-xl:px-10 max-xl:py-3 max-lg:px-8 max-lg:py-2 rounded-full mt-6">
+                    </motion.p>
+                    <motion.button
+                        initial={{ x: "-150%" }}
+                        animate={{ x: 0 }}
+                        transition={{
+                            delay: 1,
+                            ease: "backOut",
+                            duration: 2,
+                        }}
+                        className="flex items-center max-md:text-sm gap-7 bg-black text-white px-14 py-4 max-xl:px-10 max-xl:py-3 max-lg:px-8 max-lg:py-2 rounded-full mt-6"
+                    >
                         Купить сейчас
                         <Image
                             src={"/icons/to-right-icon.png"}
@@ -45,13 +72,31 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                             height={10}
                             alt=""
                         />
-                    </button>
+                    </motion.button>
                 </div>
                 <div className="mt-10 max-2xl:mt-5 max-xl:mt-10 max-lg:mt-0 w-full relative">
-                    <p className="text-lg font-semibold">
+                    <motion.p
+                        initial={{ x: "-150%" }}
+                        animate={{ x: 0 }}
+                        transition={{
+                            delay: 1.3,
+                            ease: "backOut",
+                            duration: 2,
+                        }}
+                        className="text-lg font-semibold"
+                    >
                         You mignt love Ice cream:
-                    </p>
-                    <div className="flex items-center gap-5">
+                    </motion.p>
+                    <motion.div
+                        initial={{ x: "-130%" }}
+                        animate={{ x: 0 }}
+                        transition={{
+                            delay: 1.6,
+                            ease: "backOut",
+                            duration: 2.5,
+                        }}
+                        className="flex items-center gap-5"
+                    >
                         <div className="relative mt-5">
                             <Swiper
                                 className="w-[40vw] max-w-[800px] max-lg:w-[100vw]"
@@ -174,7 +219,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                                 className="w-full h-full"
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
@@ -182,7 +227,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.8, ease: "easeIn", duration: 0.5 }}
+                    transition={{ delay: 0.5, ease: "backOut", duration: 3 }}
                     className={"w-full h-full z-10 "}
                 >
                     <Image
@@ -194,9 +239,9 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                     />
                 </motion.div>
                 <motion.div
-                    initial={{ x:"150%" }}
-                    animate={{ x:0 }}
-                    transition={{ delay: 0.8, ease: "easeIn", duration: 0.5 }}
+                    initial={{ x: "150%" }}
+                    animate={{ x: 0 }}
+                    transition={{ delay: 0.7, ease: "backOut", duration: 2 }}
                     className="w-full h-auto text-white z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px] max-lg:translate-y-1/2 max-sm:translate-y-10"
                 >
                     <div className="flex items-start gap-3">
