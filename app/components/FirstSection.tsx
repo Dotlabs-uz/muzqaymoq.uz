@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { motion } from "framer-motion";
 
 interface FirstSectionProps {}
 
@@ -60,24 +61,23 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                                 breakpoints={{
                                     1536: {
                                         spaceBetween: 20,
-                                     },
+                                    },
                                     1024: {
                                         spaceBetween: 10,
-                                        slidesPerView:2
-                                     },
+                                        slidesPerView: 2,
+                                    },
                                     768: {
                                         spaceBetween: 10,
-                                        slidesPerView:3
-                                     },
-                                     400:{
-                                        slidesPerView:2
-                                     },
-                                     0: {
+                                        slidesPerView: 3,
+                                    },
+                                    400: {
+                                        slidesPerView: 2,
+                                    },
+                                    0: {
                                         spaceBetween: 5,
-                                        slidesPerView:2
-                                     },
-                                }
-                                }
+                                        slidesPerView: 2,
+                                    },
+                                }}
                             >
                                 <SwiperSlide className="mb-16">
                                     <div className="flex gap-5 max-xl:gap-2 items-center shadow-lg rounded-3xl p-5 max-sm:p-3 cursor-pointer z-10">
@@ -162,24 +162,43 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                                 <SwiperSlide></SwiperSlide>
                             </Swiper>
                         </div>
-                        <div onClick={nextHandler} className="w-[50px] h-[50px] p-4 rounded-full shadow-xl flex items-center justify-center cursor-pointer  z-50">
-                            <Image src={"/icons/to-right-icon2.png"} width={100} height={100} alt="" className="w-full h-full"/>
-			    		</div>
+                        <div
+                            onClick={nextHandler}
+                            className="w-[50px] h-[50px] p-4 rounded-full shadow-xl flex items-center justify-center cursor-pointer  z-50"
+                        >
+                            <Image
+                                src={"/icons/to-right-icon2.png"}
+                                width={100}
+                                height={100}
+                                alt=""
+                                className="w-full h-full"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div className="w-full flex max-lg:gap-40 max-sm:gap-20 items-start max-lg:text-center max-lg:translate-y-10 max-lg:h-[700px] max-sm:h-[370px] justify-between">
-                <div className="w-full h-full z-10 ">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.8, ease: "easeIn", duration: 0.5 }}
+                    className={"w-full h-full z-10 "}
+                >
                     <Image
                         src={"/image/Ice.svg"}
                         width={100}
                         height={100}
                         alt=""
-                        className="w-[990px] h-[98vh] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[55%] left-[35%] max-2xl:left-[32%] max-xl:left-[28%] max-lg:left-0 max-lg:top-1/2 max-md:h-[85vh] max-md:top-[35%] max-sm:h-[400px] max-sm:w-[400px] max-sm:top-[150px] -translate-y-1/2 "
+                        className="w-[990px] h-[98vh] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[50%] left-[35%] max-2xl:left-[32%] max-xl:left-[28%] max-lg:left-0 max-lg:top-1/2 max-md:h-[85vh] max-md:top-[35%] max-sm:h-[400px] max-sm:w-[400px] max-sm:top-[150px] -translate-y-1/2 "
                     />
-                </div>
-                <div className="w-full h-auto text-white z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px] max-lg:translate-y-1/2 max-sm:translate-y-10">
+                </motion.div>
+                <motion.div
+                    initial={{ x:"150%" }}
+                    animate={{ x:0 }}
+                    transition={{ delay: 0.8, ease: "easeIn", duration: 0.5 }}
+                    className="w-full h-auto text-white z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px] max-lg:translate-y-1/2 max-sm:translate-y-10"
+                >
                     <div className="flex items-start gap-3">
                         <Image
                             src={"/icons/Vector1.png"}
@@ -215,7 +234,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                         />
                         Available Size
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -44,7 +44,7 @@ function Header() {
                 }
                 transition={{ delay: 0, ease: "easeIn", duration: 0.5 }}
                 className={
-                    "hidden max-lg:block fixed z-40 left-0  w-full h-screen bg-[#CFCDCB]"
+                    "hidden max-lg:block fixed z-40 left-0  w-full h-screen bg-[#CFCDCB] -translate-x-[100%]"
                 }
             >
                 <div className="pt-32 pl-10 text-4xl font-black flex flex-col h-[85vh] items-start justify-between">
