@@ -235,7 +235,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                         width={100}
                         height={100}
                         alt=""
-                        className="w-[990px] h-[98vh] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[50%] left-[35%] max-2xl:left-[32%] max-xl:left-[28%] max-lg:left-0 max-lg:top-1/2 max-md:h-[85vh] max-md:top-[35%] max-sm:h-[400px] max-sm:w-[400px] max-sm:top-[150px] -translate-y-1/2 "
+                        className="pointer-events-none w-[990px] h-[98vh] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[50%] left-[35%] max-2xl:left-[32%] max-xl:left-[28%] max-lg:left-0 max-lg:top-1/2 max-md:h-[85vh] max-md:top-[35%] max-sm:h-[400px] max-sm:w-[400px] max-sm:top-[150px] -translate-y-1/2 "
                     />
                 </motion.div>
                 <motion.div

@@ -52,7 +52,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                                 alt={""}
                                 width={150}
                                 height={100}
-                                className="mt-5"
+                                className="mt-5 pointer-events-none"
                             />
                         </div>
                         <Image
@@ -60,7 +60,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                             alt=""
                             width={70}
                             height={70}
-                            className={'max-lg:w-[50px] max-h-[50px]'}
+                            className={'pointer-events-none max-lg:w-[50px] max-h-[50px]'}
                         />
                     </div>
                     <p className="mt-10 text-xl max-lg:text-lg font-semibold">
@@ -80,7 +80,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                                 alt={""}
                                 width={150}
                                 height={100}
-                                className="mt-5"
+                                className="mt-5 pointer-events-none"
                             />
                         </div>
                         <Image
@@ -88,7 +88,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                             alt=""
                             width={70}
                             height={70}
-                            className={'max-lg:w-[50px] max-h-[50px]'}
+                            className={'max-lg:w-[50px] max-h-[50px] pointer-events-none'}
                         />
                     </div>
                     <p className="mt-10 text-xl max-lg:text-lg font-semibold">
@@ -103,7 +103,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                         alt=""
                         width={100}
                         height={100}
-                        className="h-full w-[70%] max-md:w-[60%] max-sm:w-[80%]"
+                        className="h-full w-[70%] max-md:w-[60%] max-sm:w-[80%] pointer-events-none"
                     />
                 </div>
             </div>
