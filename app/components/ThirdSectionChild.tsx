@@ -8,11 +8,11 @@ const ThirdSectionChild = () => {
     const [hover, setHover] = useState(false);
 
     return (
-        <div className="h-[90vh] max-h-[670px] max-xl:h-[80vh] max-lg:h-[55vh] flex items-start pt-16 max-lg:pt-9 max-[400px]:pt-5 justify-center">
+        <div className="h-[90vh] bg-red-500 max-h-[670px] max-xl:h-[80vh] max-lg:h-[530px] max-[400px]:h-[420px] flex items-start pt-16 max-lg:pt-12 max-[400px]:pt-8 justify-center">
             <div
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                className="bg-[#9D93C2] w-full max-h-[600px] h-[75vh] max-xl:h-[65vh] max-xl:hover:h-[70vh] max-lg:h-[45vh] max-lg:hover:h-[50vh] hover:h-[80vh] ease-linear duration-200 max-2xl:w-[400px] rounded-3xl flex flex-col justify-between gap-10 max-[400px]:gap-2 cursor-pointer items-center py-10 max-lg:py-5"
+                className="bg-[#9D93C2] w-full max-h-[600px] h-[75vh] max-xl:h-[65vh] max-xl:hover:h-[70vh] max-lg:h-[400px] max-lg:hover:h-[450px] max-[400px]:h-[320px] max-[400px]:hover:h-[370px] hover:h-[80vh] ease-linear duration-200 max-2xl:w-[400px] rounded-3xl max-lg:rounded-2xl flex flex-col justify-between gap-10 max-[400px]:gap-2 cursor-pointer items-center py-10 max-lg:py-5"
             >
                 <div
                     className={`bg-[#2A1B68] rounded-full relative ease-in-out duration-200 ${

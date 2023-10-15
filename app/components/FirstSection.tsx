@@ -21,7 +21,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
 
     return (
         <section className="w-full pt-44 max-lg:pt-24 max-lg:gap-10 relative flex max-lg:flex-col-reverse justify-between">
-            <div className="min-h-[100vh] max-lg:min-h-[800px] bg-[#53C9ED] w-[60%] max-h-[800px] max-lg:w-[80%] absolute top-0 -right-[17%] max-sm:min-h-[460px]"></div>
+            <div className="min-h-[100vh] max-lg:min-h-[800px] bg-[#53C9ED] w-[60%] max-h-[800px] max-lg:w-[80%] absolute top-0 -right-[17%] max-sm:min-h-[410px]"></div>
 
             <div className="w-full flex flex-col gap-10 max-lg:flex-col-reverse max-2xl:gap-5 max-sm:gap-2 items-start">
                 <div className="w-[80%] max-xl:w-[65%] max-lg:w-[50%] max-sm:w-full">
@@ -223,7 +223,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                 </div>
             </div>
 
-            <div className="w-full flex max-lg:gap-40 max-sm:gap-20 items-start max-lg:text-center max-lg:translate-y-10 max-lg:h-[700px] max-sm:h-[370px] justify-between">
+            <div className="w-full flex max-lg:gap-40 max-sm:gap-20 items-start max-lg:items-center max-sm:items-start max-lg:translate-y-10 max-lg:h-[700px] max-sm:h-[300px] justify-between">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -235,14 +235,14 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                         width={100}
                         height={100}
                         alt=""
-                        className="pointer-events-none w-[990px] h-[98vh] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[50%] left-[35%] max-2xl:left-[32%] max-xl:left-[28%] max-lg:left-0 max-lg:top-1/2 max-md:h-[85vh] max-md:top-[35%] max-sm:h-[400px] max-sm:w-[400px] max-sm:top-[150px] -translate-y-1/2 "
+                        className="pointer-events-none w-[990px] h-[98vh] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[50%] left-[35%] max-2xl:left-[32%] max-xl:left-[28%] max-lg:left-0 max-lg:top-1/2 max-md:h-[85vh] max-md:top-[35%] max-sm:h-[400px] max-sm:w-[400px] max-sm:top-[120px] -translate-y-1/2 "
                     />
                 </motion.div>
                 <motion.div
                     initial={{ x: "150%" }}
                     animate={{ x: 0 }}
                     transition={{ delay: 0.7, ease: "backOut", duration: 2 }}
-                    className="w-full h-auto text-white z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px] max-lg:translate-y-1/2 max-sm:translate-y-10"
+                    className="w-full h-auto text-white z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px]"
                 >
                     <div className="flex items-start gap-3">
                         <Image

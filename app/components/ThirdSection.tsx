@@ -42,10 +42,10 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                     ease: "backOut",
                     duration: 4,
                 }}
-                className="relative mt-5"
+                className="relative mt-5 h-auto"
             >
                 <Swiper
-                    className="w-[120vw]"
+                    className="w-[120vw] h-auto"
                     spaceBetween={20}
                     slidesPerView={4}
                     breakpoints={{
