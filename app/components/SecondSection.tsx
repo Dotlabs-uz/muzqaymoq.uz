@@ -2,9 +2,20 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface SecondSectionProps {}
+
+const cardVariants: Variants = {
+    offscreen: { scale: 0.7, opacity: 0 },
+    onscreen: { scale: 1, opacity: 1 },
+    offscreen2: {},
+    onscreen2: {rotate: 360},
+    offscreen3: { x: '50%', opacity: 0 },
+    onscreen3: { x: '0%', opacity: 1},
+    offscreen4: { y: "50%", opacity: 0 },
+    onscreen4: { y: "0%", opacity: 1 },
+  };
 
 const SecondSection: React.FC<SecondSectionProps> = () => {
     const [iceType, setIceType] = useState<any>("1");
@@ -13,8 +24,10 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
         <section className="flex max-lg:flex-col items-center justify-between mt-20 max-sm:mt-10 w-full gap-40 max-xl:gap-20 max-lg:gap-28 max-md:gap-20 max-lg:items-start">
             <div className="w-full max-lg:w-3/4 max-md:w-full max-sm:w-[90%] m-auto relative">
                 <motion.div
-                    initial={{}}
-                    whileInView={{ rotate: 360 }}
+                    initial='offscreen2'
+                    whileInView='onscreen2'
+                    variants={cardVariants}
+                    viewport={{ once: true, amount: 0.8 }}
                     transition={{
                         delay: 0.3,
                         ease: "backOut",
@@ -75,13 +88,11 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     />
                 </motion.div>
                 <motion.div
-                    initial={{ scale: 0.5, opacity: 0.5 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{
-                        delay: 0,
-                        ease: "easeInOut",
-                        duration: 2,
-                    }}
+                    initial='offscreen'
+                    whileInView='onscreen'
+                    viewport={{ once: true, amount: 0.8 }}
+                    variants={cardVariants}
+                    transition={{ease:"easeOut", duration:2}}
                     className={
                         "absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[80%] max-[500px]:w-[70%]"
                     }
@@ -98,20 +109,23 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
 
             <div className="w-full max-xl:w-3/4 max-sm:w-[100%]">
                 <motion.p
-                    initial={{ x: "100%" }}
-                    whileInView={{ x: 0 }}
+                    initial={'offscreen3'}
+                    whileInView={'onscreen3'}
+                    viewport={{ once: true }}
                     transition={{
-                        delay: 0,
                         ease: "backOut",
                         duration: 3,
                     }}
+                    variants={cardVariants}
                     className='text-4xl max-xl:text-3xl max-md:text-2xl font-["lepka"]'
                 >
                     The result is a smooth and semi-solid foam
                 </motion.p>
                 <motion.p
-                    initial={{ x: "100%" }}
-                    whileInView={{ x: 0 }}
+                    initial={'offscreen3'}
+                    whileInView={'onscreen3'}
+                    variants={cardVariants}
+                    viewport={{ once: true}}
                     transition={{
                         delay: 0.3,
                         ease: "backOut",
@@ -125,8 +139,10 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </motion.p>
                 <motion.div
-                    initial={{ y: "50%", opacity: 0 }}
-                    whileInView={{ y: "0%", opacity: 1 }}
+                    initial={'offscreen4'}
+                    whileInView={'onscreen4'}
+                    variants={cardVariants}
+                    viewport={{ once: true, amount: 0.8 }}
                     transition={{
                         delay: 0,
                         ease: "backOut",

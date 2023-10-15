@@ -11,9 +11,10 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0, ease: "backOut", duration: 2 }}
-                className="font-bold gap-4 text-center leading-tight text-5xl max-lg:text-4xl max-md:text-3xl max-sm:text-3xl tracking- font-['lepka']"
+                viewport={{ once: true}}
+                className="font-bold text-center leading-tight text-5xl max-lg:text-4xl max-md:text-3xl max-sm:text-3xl tracking- font-['lepka']"
             >
-                SOME OF OUR{" "}
+                SOME OF OUR
                 <span className='text-[#1C8BAD] font-["lepka"]'>
                     Ice cream lovers
                 </span>
@@ -23,6 +24,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                     initial={{ opacity: 0, x: "-100%" }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0, ease: "backOut", duration: 2 }}
+                    viewport={{ once: true}}
                     className="p-7 shadow-2xl rounded-2xl"
                 >
                     <div className="flex items-center justify-between">
@@ -56,6 +58,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                     initial={{ opacity: 0, x: "100%" }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0, ease: "backOut", duration: 2 }}
+                    viewport={{ once: true}}
                     className="p-7 shadow-2xl rounded-2xl "
                 >
                     <div className="flex items-center justify-between">
@@ -91,6 +94,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                     initial={{ opacity: 0, y: "100%" }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0, ease: "backOut", duration: 2 }}
+                    viewport={{ once: true}}
                     className="p-7 shadow-2xl rounded-2xl row-start-2 row-end-3 col-start-2 col-end-3 max-md:row-start-4 max-md:row-end-5 max-md:col-span-1"
                 >
                     <div className="flex items-center justify-between">
@@ -126,6 +130,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0, ease: "backOut", duration: 2 }}
+                    viewport={{ once: true}}
                     className="flex items-center justify-center col-start-2 col-end-3 row-start-1 row-end-2 max-xl:col-span-1 "
                 >
                     <Image

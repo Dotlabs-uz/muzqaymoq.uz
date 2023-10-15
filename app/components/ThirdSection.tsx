@@ -1,10 +1,16 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { motion } from "framer-motion";
-
-import "swiper/css";
+import { motion, Variants } from "framer-motion";
 import ThirdSectionChild from "./ThirdSectionChild";
+import "swiper/css";
+
+const cardVariants: Variants = {
+    offscreen: { x: '-20%', opacity: 0},
+    onscreen: { x: 0, opacity:1 },
+    offscreen2: { x: "100%"},
+    onscreen2: { x: 0},
+  };
 
 interface SecondSectionProps {}
 
@@ -12,12 +18,14 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
     return (
         <section className="mt-20">
             <motion.h2
-                initial={{ x: "-100%" }}
-                whileInView={{ x: 0 }}
+                initial={'offscreen'}
+                whileInView={'onscreen'}
+                variants={cardVariants}
+                viewport={{ once: true, amount: 0.8 }}
                 transition={{
                     delay: 0,
                     ease: "backOut",
-                    duration: 4,
+                    duration: 3,
                 }}
                 className='text-4xl font-["lepka"]'
             >
@@ -25,8 +33,10 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
             </motion.h2>
 
             <motion.div
-                initial={{ x: "100%" }}
-                whileInView={{ x: 0 }}
+                initial={'offscreen2'}
+                whileInView={'onscreen2'}
+                variants={cardVariants}
+                viewport={{ once: true, amount: 0 }}
                 transition={{
                     delay: 0,
                     ease: "backOut",

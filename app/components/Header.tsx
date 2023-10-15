@@ -16,7 +16,7 @@ const sidebar = {
     closed: {
         clipPath: "circle(30px at 40px 40px)",
         transition: {
-            delay: 0.5,
+            delay: 0,
             type: "spring",
             stiffness: 400,
             damping: 40,
@@ -37,7 +37,7 @@ function Header() {
                     ease: "backOut",
                     duration: 1,
                 }}
-                className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-10 pb-5 w-full  absolute max-lg:fixed top-0 left-0 max-lg:bg-white flex items-center justify-between gap-5"
+                className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-10 max-sm:py-5 pb-5 w-full  absolute max-lg:fixed top-0 left-0 max-lg:bg-white flex items-center justify-between gap-5"
             >
                 <div className="flex pr-24 max-[1330px]:pr-0 items-center gap-7 w-[60%] max-lg:w-full justify-between">
                     <GiHamburgerMenu
@@ -67,7 +67,7 @@ function Header() {
             <motion.div
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
-                transition={{ delay: 0, ease: "easeIn", duration: 0.5 }}
+                transition={{ delay: 0, ease: "anticipate", duration: 0.5 }}
                 variants={sidebar}
                 className={
                     "hidden max-lg:block fixed z-40 left-0  w-full h-screen bg-[#CFCDCB]"

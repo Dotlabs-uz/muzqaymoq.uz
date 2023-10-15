@@ -227,7 +227,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, ease: "backOut", duration: 3 }}
+                    transition={{ delay: 0.5, ease: "anticipate", duration: 3 }}
                     className={"w-full h-full z-10 "}
                 >
                     <Image
