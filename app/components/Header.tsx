@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 import { motion, useCycle } from "framer-motion";
 
 const sidebar = {
@@ -37,28 +38,35 @@ function Header() {
                     ease: "backOut",
                     duration: 1,
                 }}
+                id="home"
                 className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-10 max-sm:py-5 pb-5 w-full  absolute max-lg:fixed top-0 left-0 max-lg:bg-white flex items-center justify-between gap-5"
             >
                 <div className="flex pr-24 max-[1330px]:pr-0 items-center gap-7 w-[60%] max-lg:w-full justify-between">
-                    <GiHamburgerMenu
-                        size={30}
-                        className={"hidden max-lg:block"}
-                        onClick={() => toggleOpen()}
-                    />
+                    {isOpen ? (
+                        <AiOutlineClose
+                            size={30}
+                            className={"hidden max-lg:block"}
+                            onClick={() => toggleOpen()}
+                        />
+                    ) : (
+                        <GiHamburgerMenu
+                            size={30}
+                            className={"hidden max-lg:block"}
+                            onClick={() => toggleOpen()}
+                        />
+                    )}
+
                     <p className="font-['lepka'] text-2xl max-sm:text-xl max-[400px]:text-base">
                         ДИЗАЙН УХУИ СТУДИЯ
                     </p>
                     <div className="flex max-lg:hidden items-center gap-5 justify-between">
-                        <Link href={"#"}>
+                        <Link href={"#home"}>
                             <p>Домой</p>
                         </Link>
-                        <Link href={"#"}>
-                            <p>О нас</p>
-                        </Link>
-                        <Link href={"#"}>
+                        <Link href={"#catalog"}>
                             <p>Каталог</p>
                         </Link>
-                        <Link href={"#"}>
+                        <Link href={"#contact"}>
                             <p>Контакты</p>
                         </Link>
                     </div>
@@ -76,16 +84,25 @@ function Header() {
                 <div className="pt-32 pl-10 text-4xl font-black flex flex-col h-[85vh] items-start justify-between">
                     <ul>
                         <li>
-                            <Link href={"#"}>Домой</Link>
+                            <Link onClick={() => toggleOpen()} href={"#home"}>
+                                Домой
+                            </Link>
                         </li>
                         <li className="mt-4">
-                            <Link href={"#"}>О нас</Link>
+                            <Link
+                                onClick={() => toggleOpen()}
+                                href={"#catalog"}
+                            >
+                                Каталог
+                            </Link>
                         </li>
                         <li className="mt-4">
-                            <Link href={"#"}>Каталог</Link>
-                        </li>
-                        <li className="mt-4">
-                            <Link href={"#"}>Соц Сети</Link>
+                            <Link
+                                onClick={() => toggleOpen()}
+                                href={"#contact"}
+                            >
+                                Соц Сети
+                            </Link>
                         </li>
                     </ul>
                     <div>

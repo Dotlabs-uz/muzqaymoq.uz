@@ -8,7 +8,7 @@ const ThirdSectionChild = () => {
     const [hover, setHover] = useState(false);
 
     return (
-        <div className="h-[90vh] bg-red-500 max-h-[670px] max-xl:h-[80vh] max-lg:h-[530px] max-[400px]:h-[420px] flex items-start pt-16 max-lg:pt-12 max-[400px]:pt-8 justify-center">
+        <div className="h-[90vh] max-h-[670px] max-xl:h-[80vh] max-lg:h-[530px] max-[400px]:h-[420px] flex items-start pt-16 max-lg:pt-12 max-[400px]:pt-8 justify-center">
             <div
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}

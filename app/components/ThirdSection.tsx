@@ -28,6 +28,7 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                     duration: 3,
                 }}
                 className='text-4xl font-["lepka"]'
+                id="catalog"
             >
                 Popular product
             </motion.h2>

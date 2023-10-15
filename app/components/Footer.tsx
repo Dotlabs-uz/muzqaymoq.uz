@@ -5,7 +5,7 @@ interface FooterSectionProps {}
 
 const Footer: React.FC<FooterSectionProps> = () => {
     return (
-        <footer className="flex justify-between max-sm:flex-col gap-20 max-lg:gap-9 bg-[#282A27] pt-10 px-20 pb-20 max-sm:px-10">
+        <footer id="contact" className="flex justify-between max-sm:flex-col gap-20 max-lg:gap-9 bg-[#282A27] pt-10 px-20 pb-20 max-sm:px-10 max-sm:pb-10">
             <div className="text-white max-lg:w-3/4 max-sm:w-full">
                 <p className="text-2xl font-medium font-['lepka']">
                     ДИЗАЙН УХУИ.СТУДИЯ
