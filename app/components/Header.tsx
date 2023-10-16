@@ -84,25 +84,25 @@ function Header() {
                 <div className="pt-32 pl-10 text-4xl font-black flex flex-col h-[85vh] items-start justify-between">
                     <ul>
                         <li>
-                            <Link onClick={() => toggleOpen()} href={"#home"}>
+                            <a onClick={() => toggleOpen()} href={"#home"}>
                                 Домой
-                            </Link>
+                            </a>
                         </li>
                         <li className="mt-4">
-                            <Link
+                            <a
                                 onClick={() => toggleOpen()}
                                 href={"#catalog"}
                             >
                                 Каталог
-                            </Link>
+                            </a>
                         </li>
                         <li className="mt-4">
-                            <Link
+                            <a
                                 onClick={() => toggleOpen()}
                                 href={"#contact"}
                             >
                                 Соц Сети
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                     <div>
