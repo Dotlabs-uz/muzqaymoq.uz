@@ -12,7 +12,7 @@ const ThirdSectionChild = () => {
             <div
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                className="bg-[#9D93C2] w-full max-h-[600px] h-[75vh] max-xl:h-[65vh] max-xl:hover:h-[70vh] max-lg:h-[400px] max-lg:hover:h-[450px] max-[400px]:h-[320px] max-[400px]:hover:h-[370px] hover:h-[80vh] ease-linear duration-200 max-2xl:w-[400px] rounded-3xl max-lg:rounded-2xl flex flex-col justify-between gap-10 max-[400px]:gap-2 cursor-pointer items-center py-10 max-lg:py-5"
+                className="bg-[#9D93C2] w-full max-h-[600px] h-[75vh] max-xl:h-[65vh] max-xl:hover:h-[70vh] max-lg:h-[400px] max-lg:hover:h-[450px] max-[400px]:h-[320px] max-[400px]:hover:h-[370px] focus:h-[80vh] hover:h-[80vh] ease-linear duration-200 max-2xl:w-[400px] rounded-3xl max-lg:rounded-2xl flex flex-col justify-between gap-10 max-[400px]:gap-2 cursor-pointer items-center py-10 max-lg:py-5"
             >
                 <div
                     className={`bg-[#2A1B68] rounded-full relative ease-in-out duration-200 ${

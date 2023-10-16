@@ -27,7 +27,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     initial='offscreen2'
                     whileInView='onscreen2'
                     variants={cardVariants}
-                    viewport={{ once: true, amount: 0.8 }}
+                    viewport={{ once: true}}
                     transition={{
                         delay: 0.3,
                         ease: "backOut",
@@ -90,7 +90,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                 <motion.div
                     initial='offscreen'
                     whileInView='onscreen'
-                    viewport={{ once: true, amount: 0.8 }}
+                    viewport={{ once: true}}
                     variants={cardVariants}
                     transition={{ease:"easeOut", duration:2}}
                     className={
