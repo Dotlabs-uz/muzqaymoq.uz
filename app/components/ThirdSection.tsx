@@ -37,11 +37,11 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                 initial={'offscreen2'}
                 whileInView={'onscreen2'}
                 variants={cardVariants}
-                viewport={{ once: true, amount: 0 }}
+                viewport={{ once: true}}
                 transition={{
                     delay: 0,
                     ease: "backOut",
-                    duration: 4,
+                    duration: 2,
                 }}
                 className="relative mt-5 h-auto"
             >

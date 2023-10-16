@@ -89,7 +89,7 @@ const FourthSection: React.FC<FourthSectionProps> = () => {
                 <motion.div
                     initial={{ x: "-100%",opacity:0 }}
                     whileInView={{ x: "0",opacity:1 }}
-                    transition={{ delay: 1, ease: "backOut", duration: 3 }}
+                    transition={{ delay: 0.5, ease: "backOut", duration: 3 }}
                     viewport={{ once: true}}
                     className="w-full flex items-center justify-center"
                 >
@@ -106,7 +106,7 @@ const FourthSection: React.FC<FourthSectionProps> = () => {
                     <motion.p
                         initial={{ x: "110%", opacity:0}}
                         whileInView={{ x: "0", opacity:1 }}
-                        transition={{ delay: 1, ease: "backOut", duration: 2 }}
+                        transition={{ delay: 0.5, ease: "backOut", duration: 2 }}
                         viewport={{ once: true}}
                         className='text-5xl max-xl:text-4xl max-md:text-3xl max-sm:text-2xl text-white font-["lepka"]'
                     >
@@ -116,7 +116,7 @@ const FourthSection: React.FC<FourthSectionProps> = () => {
                         initial={{ x: "110%", opacity:0 }}
                         whileInView={{ x:"0", opacity:1 }}
                         transition={{
-                            delay: 1.5,
+                            delay: 1,
                             ease: "backOut",
                             duration: 2,
                         }}
@@ -132,7 +132,7 @@ const FourthSection: React.FC<FourthSectionProps> = () => {
                     <motion.div
                         initial={{ x: "110%", opacity:0 }}
                         whileInView={{ x: "0", opacity:1 }}
-                        transition={{ delay: 2, ease: "backOut", duration: 2 }}
+                        transition={{ delay: 1.4, ease: "backOut", duration: 2 }}
                         viewport={{ once: true}}
                         className="flex max-md:flex-col items-center max-md:items-start gap-10 max-sm:gap-5 mt-5"
                     >
