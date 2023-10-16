@@ -60,15 +60,15 @@ function Header() {
                         ДИЗАЙН УХУИ СТУДИЯ
                     </p>
                     <div className="flex max-lg:hidden items-center gap-5 justify-between">
-                        <Link scroll={true} href={"/#home"}>
+                        <a href={"/#home"}>
                             <p>Домой</p>
-                        </Link>
-                        <Link scroll={true} href={"/#catalog"}>
+                        </a>
+                        <a href={"/#catalog"}>
                             <p>Каталог</p>
-                        </Link>
-                        <Link scroll={true} href={"/#contact"}>
+                        </a>
+                        <a href={"/#contact"}>
                             <p>Контакты</p>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </motion.header>
@@ -84,27 +84,25 @@ function Header() {
                 <div className="pt-32 pl-10 text-4xl font-black flex flex-col h-[85vh] items-start justify-between">
                     <ul>
                         <li>
-                            <Link scroll={true} onClick={() => toggleOpen()} href={"/#home"}>
+                            <a onClick={() => toggleOpen()} href={"/#home"}>
                                 Домой
-                            </Link>
+                            </a>
                         </li>
                         <li className="mt-4">
-                            <Link
-                                scroll={true}
+                            <a
                                 onClick={() => toggleOpen()}
                                 href={"/#catalog"}
                             >
                                 Каталог
-                            </Link>
+                            </a>
                         </li>
                         <li className="mt-4">
-                            <Link
+                            <a
                                 onClick={() => toggleOpen()}
                                 href={"/#contact"}
-                                scroll={true}
                             >
                                 Соц Сети
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                     <div>
