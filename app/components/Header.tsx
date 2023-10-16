@@ -60,13 +60,13 @@ function Header() {
                         ДИЗАЙН УХУИ СТУДИЯ
                     </p>
                     <div className="flex max-lg:hidden items-center gap-5 justify-between">
-                        <Link href={"#home"}>
+                        <Link scroll={true} href={"/#home"}>
                             <p>Домой</p>
                         </Link>
-                        <Link href={"#catalog"}>
+                        <Link scroll={true} href={"/#catalog"}>
                             <p>Каталог</p>
                         </Link>
-                        <Link href={"#contact"}>
+                        <Link scroll={true} href={"/#contact"}>
                             <p>Контакты</p>
                         </Link>
                     </div>
@@ -84,25 +84,27 @@ function Header() {
                 <div className="pt-32 pl-10 text-4xl font-black flex flex-col h-[85vh] items-start justify-between">
                     <ul>
                         <li>
-                            <a onClick={() => toggleOpen()} href={"#home"}>
+                            <Link scroll={true} onClick={() => toggleOpen()} href={"/#home"}>
                                 Домой
-                            </a>
+                            </Link>
                         </li>
                         <li className="mt-4">
-                            <a
+                            <Link
+                                scroll={true}
                                 onClick={() => toggleOpen()}
-                                href={"#catalog"}
+                                href={"/#catalog"}
                             >
                                 Каталог
-                            </a>
+                            </Link>
                         </li>
                         <li className="mt-4">
-                            <a
+                            <Link
                                 onClick={() => toggleOpen()}
-                                href={"#contact"}
+                                href={"/#contact"}
+                                scroll={true}
                             >
                                 Соц Сети
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <div>
