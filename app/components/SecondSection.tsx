@@ -7,8 +7,8 @@ import { motion, Variants } from "framer-motion";
 interface SecondSectionProps {}
 
 const cardVariants: Variants = {
-    offscreen: { scale: 0.7, opacity: 0 },
-    onscreen: { scale: 1, opacity: 1 },
+    offscreen: { scale: 0.2, x: "-30%"},
+    onscreen: { scale: 1, x:0},
     offscreen2: {},
     onscreen2: {rotate: 360},
     offscreen3: { x: '50%', opacity: 0 },
@@ -94,7 +94,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     variants={cardVariants}
                     transition={{ease:"easeOut", duration:2}}
                     className={
-                        "absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[80%] max-[500px]:w-[70%]"
+                        "absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[500px] max-2xl:w-[370px] max-sm:w-[300px] max-[500px]:w-[220px]  max-[420px]:w-[180px]"
                     }
                 >
                     <Image
@@ -102,7 +102,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                         alt=""
                         width={100}
                         height={100}
-                        className="w-full h-auto absolute pointer-events-none top-1/2 -left-[50%] -translate-y-1/2"
+                        className="w-full h-auto absolute pointer-events-none top-1/2 -left-1/2 -translate-y-1/2"
                     />
                 </motion.div>
             </div>
