@@ -1,14 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { motion } from "framer-motion";
 
-interface FirstSectionProps {}
+interface FirstSectionProps {
+    setModalHendel:Dispatch<SetStateAction<boolean>>
+}
 
-const FirstSection: React.FC<FirstSectionProps> = () => {
+const FirstSection: React.FC<FirstSectionProps> = ({setModalHendel}) => {
     const [swiperRef, setSwiperRef] = useState<any>(null);
 
     const prevHandler = () => {
@@ -62,6 +64,7 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                             ease: "backOut",
                             duration: 2,
                         }}
+                        onClick={()=> setModalHendel(true)}
                         className="flex items-center max-md:text-sm gap-7 bg-black text-white px-14 py-4 max-xl:px-10 max-xl:py-3 max-lg:px-8 max-lg:py-2 rounded-full mt-6"
                     >
                         Купить сейчас
