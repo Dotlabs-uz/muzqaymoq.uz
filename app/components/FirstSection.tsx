@@ -239,8 +239,8 @@ const FirstSection: React.FC<FirstSectionProps> = () => {
                     />
                 </motion.div>
                 <motion.div
-                    initial={{ x: "150%" }}
-                    animate={{ x: 0 }}
+                    initial={{ x:"150%"}}
+                    animate={{ x:0}}
                     transition={{ delay: 0.7, ease: "backOut", duration: 2 }}
                     className="w-full h-auto text-white z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px]"
                 >
