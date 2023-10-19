@@ -25,6 +25,22 @@ const sidebar = {
     },
 };
 
+const scrollToContent = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    contentId: string
+) => {
+    e.preventDefault();
+
+    const content = document.getElementById(contentId);
+    if (content) {
+        content.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest",
+        });
+    }
+};
+
 function Header() {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
@@ -62,19 +78,32 @@ function Header() {
                     <nav>
                         <ul className="flex max-lg:hidden items-center gap-5 justify-between">
                             <li>
-                                <Link href={"#home"}>
+                                <a
+                                    onClick={(e) => scrollToContent(e, "home")}
+                                    className={"cursor-pointer"}
+                                >
                                     <p>Домой</p>
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link href={"#catalog"}>
+                                <a
+                                    onClick={(e) =>
+                                        scrollToContent(e, "catalog")
+                                    }
+                                    className={"cursor-pointer"}
+                                >
                                     <p>Каталог</p>
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link href={"#contact"}>
+                                <a
+                                    onClick={(e) =>
+                                        scrollToContent(e, "contact")
+                                    }
+                                    className={"cursor-pointer"}
+                                >
                                     <p>Контакты</p>
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </nav>
@@ -92,17 +121,35 @@ function Header() {
                 <div className="pt-32 pl-10 text-4xl font-black flex flex-col h-[85vh] items-start justify-between">
                     <ul>
                         <li>
-                            <a onClick={() => toggleOpen()} href={"/#home"}>
+                            <a
+                                onClick={(e) => {
+                                    toggleOpen();
+                                    scrollToContent(e, "home");
+                                }}
+                                className={"cursor-pointer"}
+                            >
                                 Домой
                             </a>
                         </li>
                         <li className="mt-4">
-                            <a onClick={() => toggleOpen()} href={"/#catalog"}>
+                            <a
+                                onClick={(e) => {
+                                    toggleOpen();
+                                    scrollToContent(e, "catalog");
+                                }}
+                                className={"cursor-pointer"}
+                            >
                                 Каталог
                             </a>
                         </li>
                         <li className="mt-4">
-                            <a onClick={() => toggleOpen()} href={"/#contact"}>
+                            <a
+                                onClick={(e) => {
+                                    toggleOpen();
+                                    scrollToContent(e, "contact");
+                                }}
+                                className={"cursor-pointer"}
+                            >
                                 Соц Сети
                             </a>
                         </li>
