@@ -59,17 +59,25 @@ function Header() {
                     <p className="font-['lepka'] text-2xl max-sm:text-xl max-[400px]:text-base">
                         ДИЗАЙН УХУИ СТУДИЯ
                     </p>
-                    <div className="flex max-lg:hidden items-center gap-5 justify-between">
-                        <a href={"#home"}>
-                            <p>Домой</p>
-                        </a>
-                        <a href={"#catalog"}>
-                            <p>Каталог</p>
-                        </a>
-                        <a href={"#contact"}>
-                            <p>Контакты</p>
-                        </a>
-                    </div>
+                    <nav>
+                        <ul className="flex max-lg:hidden items-center gap-5 justify-between">
+                            <li>
+                                <Link href={"#home"}>
+                                    <p>Домой</p>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={"#catalog"}>
+                                    <p>Каталог</p>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={"#contact"}>
+                                    <p>Контакты</p>
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </motion.header>
             <motion.div
@@ -89,18 +97,12 @@ function Header() {
                             </a>
                         </li>
                         <li className="mt-4">
-                            <a
-                                onClick={() => toggleOpen()}
-                                href={"/#catalog"}
-                            >
+                            <a onClick={() => toggleOpen()} href={"/#catalog"}>
                                 Каталог
                             </a>
                         </li>
                         <li className="mt-4">
-                            <a
-                                onClick={() => toggleOpen()}
-                                href={"/#contact"}
-                            >
+                            <a onClick={() => toggleOpen()} href={"/#contact"}>
                                 Соц Сети
                             </a>
                         </li>
