@@ -4,46 +4,47 @@ import { AiOutlineClose } from "react-icons/ai";
 import InputMask from "react-input-mask";
 import { motion } from "framer-motion";
 
-const SendMessage = (e: any) => {
-    e.preventDefault();
 
-    let info: any = {};
+const Modal = ({ setModalHendel}: any) => {
+    const SendMessage = (e: any) => {
+        e.preventDefault();
 
-    const formData = new FormData(e.target);
+        let info: any = {};
 
-    formData.forEach((value, key) => {
-        info[key] = value;
-    });
+        const formData = new FormData(e.target);
 
-    console.log(info);
+        formData.forEach((value, key) => {
+            info[key] = value;
+        });
 
-    // let msg = `🆕 Запись на курса! \n`;
-    // msg += `📕 Курс: ${modalInfo?.name1} ${modalInfo?.name2} \n`;
-    // msg += `👨 Имя: ${info?.name} \n`;
-    // msg += `📞 Номер телефона: ${info?.phone} \n`;
+        console.log(info);
 
-    // axios
-    //     .post(URL, {
-    //         chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
-    //         parse_mode: "html",
-    //         text: msg,
-    //     })
-    //     .then((res) => {
-    //         if (res.status === 200 || res.status === 201) {
-    //             e.target["name"].value = "";
-    //             setPhone("");
-    //         }
-    //     })
-    //     .catch((err) => console.log(err));
-    //     setConstructor(false)
-};
+        // let msg = `🆕 Запись на курса! \n`;
+        // msg += `📕 Курс: ${modalInfo?.name1} ${modalInfo?.name2} \n`;
+        // msg += `👨 Имя: ${info?.name} \n`;
+        // msg += `📞 Номер телефона: ${info?.phone} \n`;
 
-const Modal = ({ setModalHendel, modalHandel }: any) => {
+        // axios
+        //     .post(URL, {
+        //         chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
+        //         parse_mode: "html",
+        //         text: msg,
+        //     })
+        //     .then((res) => {
+        //         if (res.status === 200 || res.status === 201) {
+        //             e.target["name"].value = "";
+        //             setPhone("");
+        //         }
+        //     })
+        //     .catch((err) => console.log(err));
+        //     setConstructor(false)
+    };
+
     return (
         <div className="fixed top-0 left-0 h-screen w-full bg-[#00000074] backdrop-blur-sm z-[100]">
             <motion.div
-                initial={{ y: "-200%",x:"-50%" }}
-                animate={{ y: "-50%", x:"-50%" }}
+                initial={{ y: "-200%", x: "-50%" }}
+                animate={{ y: "-50%", x: "-50%" }}
                 transition={{
                     delay: 0,
                     ease: "backOut",
@@ -52,10 +53,10 @@ const Modal = ({ setModalHendel, modalHandel }: any) => {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-[#DCDFD2] w-[50%] max-lg:w-[70%] max-sm:w-[90%] p-10"
             >
                 <h3 className="text-[36px] max-xl:text-[28px] max-lg:text-[25px] max-3xl:text-[30px] font-semibold text-center">
-                    {/* {modalInfo?.name1} {modalInfo?.name2} */}Name
+                    Name
                 </h3>
                 <p className="mt-5 text-[24px] max-3xl:text-[20px] max-2xl:text-[16px] leading-[32px] max-2xl:leading-[22.312px] text-center">
-                    {/* {modalInfo?.info} */}Info
+                    Info
                 </p>
                 <div className="w-3/4 max-md:w-[80%] max-sm:w-full m-auto mt-5">
                     <form

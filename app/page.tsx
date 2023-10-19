@@ -56,7 +56,7 @@ export default function Home() {
                     </div>
                     <Footer />
                     {
-                        modalHandel ? <Modal setModalHendel={setModalHendel} modalHandel={modalHandel}/> : null
+                        modalHandel ? <Modal setModalHendel={setModalHendel}/> : null
                     }
 					
                 </main>
