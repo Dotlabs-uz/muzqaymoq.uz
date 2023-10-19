@@ -55,9 +55,9 @@ export default function Home() {
                         <FifthSection />
                     </div>
                     <Footer />
-                    {/* {
+                    {
                         modalHandel ? <Modal setModalHendel={setModalHendel}/> : null
-                    } */}
+                    }
 					
                 </main>
             )}

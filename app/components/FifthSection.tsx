@@ -33,7 +33,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                                 John Devson
                             </p>
                             <Image
-                                src={"/image/section3-stars.png"}
+                                src={"/image/section3.svg"}
                                 alt={""}
                                 width={150}
                                 height={100}
@@ -67,7 +67,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                                 John Devson
                             </p>
                             <Image
-                                src={"/image/section3-stars.png"}
+                                src={"/image/section3.svg"}
                                 alt={""}
                                 width={150}
                                 height={100}
@@ -103,7 +103,7 @@ const FifthSection: React.FC<FifthSectionSectionProps> = () => {
                                 John Devson
                             </p>
                             <Image
-                                src={"/image/section3-stars.png"}
+                                src={"/image/section3.svg"}
                                 alt={""}
                                 width={150}
                                 height={100}

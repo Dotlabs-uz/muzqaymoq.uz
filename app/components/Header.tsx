@@ -60,13 +60,13 @@ function Header() {
                         ДИЗАЙН УХУИ СТУДИЯ
                     </p>
                     <div className="flex max-lg:hidden items-center gap-5 justify-between">
-                        <a href={"/#home"}>
+                        <a href={"#home"}>
                             <p>Домой</p>
                         </a>
-                        <a href={"/#catalog"}>
+                        <a href={"#catalog"}>
                             <p>Каталог</p>
                         </a>
-                        <a href={"/#contact"}>
+                        <a href={"#contact"}>
                             <p>Контакты</p>
                         </a>
                     </div>
