@@ -54,7 +54,6 @@ function Header() {
                     ease: "backOut",
                     duration: 1,
                 }}
-                id="home"
                 className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-10 max-sm:py-5 pb-5 w-full  absolute max-lg:fixed top-0 left-0 max-lg:bg-white flex items-center justify-between gap-5"
             >
                 <div className="flex pr-24 max-[1330px]:pr-0 items-center gap-7 w-[60%] max-lg:w-full justify-between">
@@ -76,7 +75,7 @@ function Header() {
                         ДИЗАЙН УХУИ СТУДИЯ
                     </p>
                     <nav>
-                        <ul className="flex max-lg:hidden items-center gap-5 justify-between">
+                        <ul className="flex max-lg:hidden items-center gap-5 justify-between font-semibold">
                             <li>
                                 <a
                                     onClick={(e) => scrollToContent(e, "home")}
@@ -118,7 +117,7 @@ function Header() {
                     "hidden max-lg:block fixed z-40 left-0  w-full h-screen bg-[#E9EDDF]"
                 }
             >
-                <div className="pt-32 pl-10 text-4xl font-black flex flex-col h-[85vh] items-start justify-between">
+                <div className="pt-32 pl-10 text-4xl font-semibold flex flex-col h-[85vh] items-start justify-between">
                     <ul>
                         <li>
                             <a
@@ -126,6 +125,7 @@ function Header() {
                                     toggleOpen();
                                     scrollToContent(e, "home");
                                 }}
+                                href={'#home'}
                                 className={"cursor-pointer"}
                             >
                                 Домой
@@ -137,6 +137,7 @@ function Header() {
                                     toggleOpen();
                                     scrollToContent(e, "catalog");
                                 }}
+                                href={'#catalog'}
                                 className={"cursor-pointer"}
                             >
                                 Каталог
@@ -149,6 +150,7 @@ function Header() {
                                     scrollToContent(e, "contact");
                                 }}
                                 className={"cursor-pointer"}
+                                href={'#contact'}
                             >
                                 Соц Сети
                             </a>

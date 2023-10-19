@@ -40,7 +40,7 @@ export default function Home() {
                     ></Image>
                 </main>
             ) : (
-                <main className="bg-[#E9EDDF] overflow-hidden">
+                <main id="home" className="bg-[#E9EDDF] overflow-hidden">
                     <div className="max-w-[1920px] m-auto relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] px-24 max-[1330px]:px-16 max-sm:px-7">
                         <Header />
 
@@ -58,7 +58,6 @@ export default function Home() {
                     {
                         modalHandel ? <Modal setModalHendel={setModalHendel}/> : null
                     }
-					
                 </main>
             )}
         </>
