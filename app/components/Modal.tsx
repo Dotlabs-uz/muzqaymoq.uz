@@ -4,8 +4,10 @@ import { AiOutlineClose } from "react-icons/ai";
 import InputMask from "react-input-mask";
 import { motion } from "framer-motion";
 
+const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
 
 const Modal = ({ setModalHendel}: any) => {
+
     const SendMessage = (e: any) => {
         e.preventDefault();
 
@@ -17,27 +19,25 @@ const Modal = ({ setModalHendel}: any) => {
             info[key] = value;
         });
 
-        console.log(info);
-
-        // let msg = `🆕 Запись на курса! \n`;
+        let msg = `🆕 Э рахмат... \n`;
         // msg += `📕 Курс: ${modalInfo?.name1} ${modalInfo?.name2} \n`;
-        // msg += `👨 Имя: ${info?.name} \n`;
+        // msg += `👨 - **** бор! \n`;
         // msg += `📞 Номер телефона: ${info?.phone} \n`;
 
-        // axios
-        //     .post(URL, {
-        //         chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
-        //         parse_mode: "html",
-        //         text: msg,
-        //     })
-        //     .then((res) => {
-        //         if (res.status === 200 || res.status === 201) {
-        //             e.target["name"].value = "";
-        //             setPhone("");
-        //         }
-        //     })
-        //     .catch((err) => console.log(err));
-        //     setConstructor(false)
+        axios
+            .post(URL, {
+                chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
+                parse_mode: "html",
+                text: msg,
+            })
+            .then((res) => {
+                if (res.status === 200 || res.status === 201) {
+                    // e.target["name"].value = "";
+                    // setPhone("");
+                }
+            })
+            .catch((err) => console.log(err));
+            setModalHendel(false)
     };
 
     return (
