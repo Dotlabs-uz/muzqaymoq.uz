@@ -29,7 +29,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     variants={cardVariants}
                     viewport={{ once: true}}
                     transition={{
-                        delay: 0.3,
+                        delay: 0,
                         ease: "backOut",
                         duration: 5,
                     }}
