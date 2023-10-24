@@ -7,10 +7,10 @@ import "swiper/css";
 import { motion } from "framer-motion";
 
 interface FirstSectionProps {
-    setModalHendel:Dispatch<SetStateAction<boolean>>
+    setModalHendel: Dispatch<SetStateAction<boolean>>;
 }
 
-const FirstSection: React.FC<FirstSectionProps> = ({setModalHendel}) => {
+const FirstSection: React.FC<FirstSectionProps> = ({ setModalHendel }) => {
     const [swiperRef, setSwiperRef] = useState<any>(null);
 
     const prevHandler = () => {
@@ -64,7 +64,7 @@ const FirstSection: React.FC<FirstSectionProps> = ({setModalHendel}) => {
                             ease: "backOut",
                             duration: 2,
                         }}
-                        onClick={()=> setModalHendel(true)}
+                        onClick={() => setModalHendel(true)}
                         className="flex items-center max-md:text-sm gap-7 bg-black text-white px-14 py-4 max-xl:px-10 max-xl:py-3 max-lg:px-8 max-lg:py-2 rounded-full mt-6"
                     >
                         Купить сейчас
@@ -230,7 +230,7 @@ const FirstSection: React.FC<FirstSectionProps> = ({setModalHendel}) => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, ease: "anticipate", duration: 3 }}
+                    transition={{ ease: "anticipate", duration: 2 }}
                     className={"w-full h-full z-10 "}
                 >
                     <Image
@@ -242,45 +242,176 @@ const FirstSection: React.FC<FirstSectionProps> = ({setModalHendel}) => {
                     />
                 </motion.div>
                 <motion.div
-                    initial={{ x:"150%"}}
-                    animate={{ x:0}}
-                    transition={{ delay: 0.7, ease: "backOut", duration: 2 }}
+                    // initial={{ x: "150%" }}
+                    // animate={{ x: 0 }}
+                    // transition={{ delay: 0.7, ease: "backOut", duration: 2 }}
                     className="w-full h-auto text-white z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px]"
                 >
                     <div className="flex items-start gap-3">
-                        <Image
-                            src={"/icons/Vector1.png"}
-                            width={100}
-                            height={10}
-                            alt=""
-                            className="max-sm:w-10 max-md:w-20"
-                        />
+                        <motion.div
+                            initial={{ x: "100%", opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{
+                                delay: 1,
+                                ease: "easeOut",
+                                duration: 1,
+                            }}
+                        >
+                            <Image
+                                src={"/icons/Vector1.png"}
+                                width={100}
+                                height={10}
+                                alt=""
+                                className="max-sm:w-10 max-md:w-20"
+                            />
+                        </motion.div>
+
                         <div className="flex gap-10 max-sm:gap-5">
                             <div className="flex flex-col items-start gap-3 max-sm:gap-2">
-                                <p>Calorie</p>
-                                <p>Total fat</p>
-                                <p>Protein</p>
-                                <p>Vt.D</p>
-                                <p>Calcium</p>
+                                <motion.p
+                                    initial={{ x: "100%", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 2,
+                                        ease: "easeOut",
+                                        duration: 1,
+                                    }}
+                                >
+                                    Calorie
+                                </motion.p>
+                                <motion.p
+                                    initial={{ x: "100%", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 2.2,
+                                        ease: "easeOut",
+                                        duration: 1,
+                                    }}
+                                >
+                                    Total fat
+                                </motion.p>
+                                <motion.p
+                                    initial={{ x: "100%", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 2.4,
+                                        ease: "easeOut",
+                                        duration: 1,
+                                    }}
+                                >
+                                    Protein
+                                </motion.p>
+                                <motion.p
+                                    initial={{ x: "100%", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 2.6,
+                                        ease: "easeOut",
+                                        duration: 1,
+                                    }}
+                                >
+                                    Vt.D
+                                </motion.p>
+                                <motion.p
+                                    initial={{ x: "100%", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 2.8,
+                                        ease: "easeOut",
+                                        duration: 1,
+                                    }}
+                                >
+                                    Calcium
+                                </motion.p>
                             </div>
                             <div className="flex max-sm:hidden flex-col items-start gap-3">
-                                <p>210</p>
-                                <p>10%</p>
-                                <p>1g</p>
-                                <p>0%</p>
-                                <p>20%</p>
+                                <motion.p
+                                    initial={{ x: "100%", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 3,
+                                        ease: "easeOut",
+                                        duration: 1,
+                                    }}
+                                >
+                                    210
+                                </motion.p>
+                                <motion.p
+                                    initial={{ x: "100%", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 3.2,
+                                        ease: "easeOut",
+                                        duration: 1,
+                                    }}
+                                >
+                                    10%
+                                </motion.p>
+                                <motion.p
+                                    initial={{ x: "100%", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 3.4,
+                                        ease: "easeOut",
+                                        duration: 1,
+                                    }}
+                                >
+                                    1g
+                                </motion.p>
+                                <motion.p
+                                    initial={{ x: "100%", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 3.6,
+                                        ease: "easeOut",
+                                        duration: 1,
+                                    }}
+                                >
+                                    0%
+                                </motion.p>
+                                <motion.p
+                                    initial={{ x: "100%", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 3.8,
+                                        ease: "easeOut",
+                                        duration: 1,
+                                    }}
+                                >
+                                    20%
+                                </motion.p>
                             </div>
                         </div>
                     </div>
                     <div className="flex items-center gap-3 mt-20 max-sm:mt-5 max-[400px]:mt-2">
-                        <Image
-                            src={"/icons/Vector1.png"}
-                            width={100}
-                            height={10}
-                            alt=""
-                            className="max-md:w-20 max-sm:w-10"
-                        />
-                        Available Size
+                        <motion.div
+                            initial={{ x: "100%", opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{
+                                delay: 1,
+                                ease: "easeOut",
+                                duration: 1,
+                            }}
+                        >
+                            <Image
+                                src={"/icons/Vector1.png"}
+                                width={100}
+                                height={10}
+                                alt=""
+                                className="max-md:w-20 max-sm:w-10"
+                            />
+                        </motion.div>
+                        <motion.p
+                            initial={{ x: "100%", opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{
+                                delay: 2,
+                                ease: "easeOut",
+                                duration: 1,
+                            }}
+                        >
+                            Available Size
+                        </motion.p>
                     </div>
                 </motion.div>
             </div>
