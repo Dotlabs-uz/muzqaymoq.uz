@@ -6,13 +6,38 @@ import ThirdSection from "./components/ThirdSection";
 import FourthSection from "./components/FourthSection";
 import FifthSection from "./components/FifthSection";
 import Footer from "./components/Footer";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Modal from "./components/Modal";
-
 import SuisseIntl from "next/font/local"
+import SecondSwiper from "./components/SecondSwiper";
+import TopingSwiper from "./components/TopingSwiper";
+import StakanSwiper from "./components/StakanSwiper";
  
 const myFont = SuisseIntl({ src: '../public/fonts/Suisse Intl/SuisseIntl-Regular.otf' })
+
+const iceCreamArr = [
+    {
+        id:1,
+        src: "",
+    },
+    {
+        id:2,
+        src: "",
+    },
+    {
+        id:3,
+        src: "",
+    },
+    {
+        id:4,
+        src: "",
+    },
+    {
+        id:5,
+        src: "",
+    },
+]
 
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
@@ -43,25 +68,30 @@ export default function Home() {
                     ></Image>
                 </main>
             ) : (
+                <>
+                <Header />
                 <main id="home" className={`${myFont.className} bg-[#E9EDDF] overflow-hidden`}>
-                    <div className="max-w-[1920px] m-auto relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] px-24 max-[1330px]:px-16 max-sm:px-7">
-                        <Header />
-
-                        <FirstSection setModalHendel={setModalHendel}/>
-
-                        <SecondSection />
+                    <div className="max-w-[1920px] m-auto mt-28 relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] px-24 max-[1330px]:px-16 max-sm:px-7">
 
                         <ThirdSection />
+                        <SecondSwiper />
+                        <TopingSwiper />
+                        <StakanSwiper />
+                        <ThirdSection />
+                       
+                        <SecondSection />
+
 
                         <FourthSection />
 
                         <FifthSection />
                     </div>
-                    <Footer />
                     {
                         modalHandel ? <Modal setModalHendel={setModalHendel}/> : null
                     }
                 </main>
+                <Footer />
+                </>
             )}
         </>
     );

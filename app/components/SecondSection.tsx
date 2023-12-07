@@ -7,27 +7,29 @@ import { motion, Variants } from "framer-motion";
 interface SecondSectionProps {}
 
 const cardVariants: Variants = {
-    offscreen: { scale: 0.2, x: "-30%"},
-    onscreen: { scale: 1, x:0},
+    offscreen: { scale: 0.2, x: "-30%" },
+    onscreen: { scale: 1, x: 0 },
     offscreen2: {},
-    onscreen2: {rotate: 360},
-    offscreen3: { x: '50%', opacity: 0 },
-    onscreen3: { x: '0%', opacity: 1},
+    onscreen2: { rotate: 360 },
+    offscreen3: { x: "50%", opacity: 0 },
+    onscreen3: { x: "0%", opacity: 1 },
     offscreen4: { y: "50%", opacity: 0 },
     onscreen4: { y: "0%", opacity: 1 },
-  };
+};
 
 const SecondSection: React.FC<SecondSectionProps> = () => {
     const [iceType, setIceType] = useState<any>("1");
 
     return (
-        <section className="flex max-lg:flex-col items-center justify-between mt-20 max-sm:mt-10 w-full gap-40 max-xl:gap-20 max-lg:gap-28 max-md:gap-20 max-lg:items-start">
+        <section className="flex max-lg:flex-col items-center justify-between mt-32 max-sm:mt-10 w-full gap-20 max-xl:gap-10 max-lg:gap-20 max-sm:gap-5 relative py-10 pl-20 max-sm:pl-2">
+            <div className="absolute top-0 right-0 w-full h-full rounded-[50px]"></div>
+
             <div className="w-full max-lg:w-3/4 max-md:w-full max-sm:w-[90%] m-auto relative">
                 <motion.div
-                    initial='offscreen2'
-                    whileInView='onscreen2'
+                    initial="offscreen2"
+                    whileInView="onscreen2"
                     variants={cardVariants}
-                    viewport={{ once: true}}
+                    viewport={{ once: true }}
                     transition={{
                         delay: 0,
                         ease: "backOut",
@@ -88,75 +90,214 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     />
                 </motion.div>
                 <motion.div
-                    initial='offscreen'
-                    whileInView='onscreen'
-                    viewport={{ once: true}}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true }}
                     variants={cardVariants}
-                    transition={{ease:"easeOut", duration:2}}
+                    transition={{ ease: "easeOut", duration: 2 }}
                     className={
-                        "absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[500px] max-2xl:w-[370px] max-sm:w-[300px] max-[500px]:w-[220px]  max-[420px]:w-[180px]"
+                        "absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[250px] max-2xl:w-[150px] max-lg:w-[200px] max-sm:w-[150px] max-[420px]:w-[100px]"
                     }
                 >
                     <Image
-                        src={"/image/section2-ice-cream.svg"}
+                        src={"/image/ice_stanok.webp"}
                         alt=""
-                        width={100}
-                        height={100}
+                        width={200}
+                        height={400}
                         className="w-full h-auto absolute pointer-events-none top-1/2 -left-1/2 -translate-y-1/2"
                     />
                 </motion.div>
             </div>
 
-            <div className="w-full max-xl:w-3/4 max-sm:w-[100%]">
-                <motion.p
-                    initial={'offscreen3'}
-                    whileInView={'onscreen3'}
-                    viewport={{ once: true }}
-                    transition={{
-                        ease: "backOut",
-                        duration: 3,
-                    }}
-                    variants={cardVariants}
-                    className='text-4xl max-xl:text-3xl max-md:text-2xl font-["lepka"]'
-                >
-                    The result is a smooth and semi-solid foam
-                </motion.p>
-                <motion.p
-                    initial={'offscreen3'}
-                    whileInView={'onscreen3'}
-                    variants={cardVariants}
-                    viewport={{ once: true}}
-                    transition={{
-                        delay: 0.3,
-                        ease: "backOut",
-                        duration: 3,
-                    }}
-                    className="text-2xl max-xl:text-xl max-sm:text-lg mt-5 max-sm:mt-3"
-                >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </motion.p>
-                <motion.div
-                    initial={'offscreen4'}
-                    whileInView={'onscreen4'}
-                    variants={cardVariants}
-                    viewport={{ once: true, amount: 0.8 }}
-                    transition={{
-                        delay: 0,
-                        ease: "backOut",
-                        duration: 3,
-                    }}
-                    className="flex items-center gap-10 max-sm:gap-5 mt-5"
-                >
-                    <button className="bg-[#014EA1] py-5 px-10 max-sm:py-3 max-sm:px-5 text-white text-xl max-sm:text-base rounded-full">
-                        Купить сейчас
-                    </button>
-                    <button className="text-xl max-sm:text-base font-semibold">
-                        Подробнее
-                    </button>
-                </motion.div>
+            <p className="text-9xl max-lg:rotate-90 z-10 text-[#bcbdb7]">=</p>
+
+            <div className="w-full relative">
+                <div className="w-full flex max-lg:gap-40 max-sm:gap-20 items-start max-lg:items-center max-sm:items-start max-lg:translate-y-10 max-lg:h-[700px] max-md:h-[550px] max-sm:h-[300px] justify-between">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ ease: "anticipate", duration: 2 }}
+                        className={"w-full h-full z-10 "}
+                    >
+                        <Image
+                            src={"/image/Ice.svg"}
+                            width={100}
+                            height={100}
+                            alt=""
+                            className="pointer-events-none w-[990px] h-[800px] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[55%] -left-[10%]  max-lg:left-0 max-lg:top-1/2 max-md:h-[700px] max-md:top-[50%] max-sm:h-[450px] max-sm:w-[450px] max-sm:top-[120px] -translate-y-1/2 "
+                        />
+                    </motion.div>
+                    <div
+                        className="text-[#808080] w-full h-auto z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px]"
+                    >
+                        <div className="flex items-start gap-3">
+                            <motion.div
+                                initial={{ x: "100%", opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{
+                                    delay: 1,
+                                    ease: "easeOut",
+                                    duration: 1,
+                                }}
+                            >
+                                <Image
+                                    src={"/icons/Vector1.png"}
+                                    width={100}
+                                    height={10}
+                                    alt=""
+                                    className="max-sm:w-10 max-md:w-20 invert-[50%]"
+                                />
+                            </motion.div>
+
+                            <div className="flex gap-10 max-sm:gap-5">
+                                <div className="flex flex-col items-start gap-3 max-sm:gap-2">
+                                    <motion.p
+                                        initial={{ x: "100%", opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 2,
+                                            ease: "easeOut",
+                                            duration: 1,
+                                        }}
+                                    >
+                                        Calorie
+                                    </motion.p>
+                                    <motion.p
+                                        initial={{ x: "100%", opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 2.2,
+                                            ease: "easeOut",
+                                            duration: 1,
+                                        }}
+                                    >
+                                        Total fat
+                                    </motion.p>
+                                    <motion.p
+                                        initial={{ x: "100%", opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 2.4,
+                                            ease: "easeOut",
+                                            duration: 1,
+                                        }}
+                                    >
+                                        Protein
+                                    </motion.p>
+                                    <motion.p
+                                        initial={{ x: "100%", opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 2.6,
+                                            ease: "easeOut",
+                                            duration: 1,
+                                        }}
+                                    >
+                                        Vt.D
+                                    </motion.p>
+                                    <motion.p
+                                        initial={{ x: "100%", opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 2.8,
+                                            ease: "easeOut",
+                                            duration: 1,
+                                        }}
+                                    >
+                                        Calcium
+                                    </motion.p>
+                                </div>
+                                <div className="flex max-sm:hidden flex-col items-start gap-3">
+                                    <motion.p
+                                        initial={{ x: "100%", opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 3,
+                                            ease: "easeOut",
+                                            duration: 1,
+                                        }}
+                                    >
+                                        210
+                                    </motion.p>
+                                    <motion.p
+                                        initial={{ x: "100%", opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 3.2,
+                                            ease: "easeOut",
+                                            duration: 1,
+                                        }}
+                                    >
+                                        10%
+                                    </motion.p>
+                                    <motion.p
+                                        initial={{ x: "100%", opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 3.4,
+                                            ease: "easeOut",
+                                            duration: 1,
+                                        }}
+                                    >
+                                        1g
+                                    </motion.p>
+                                    <motion.p
+                                        initial={{ x: "100%", opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 3.6,
+                                            ease: "easeOut",
+                                            duration: 1,
+                                        }}
+                                    >
+                                        0%
+                                    </motion.p>
+                                    <motion.p
+                                        initial={{ x: "100%", opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 3.8,
+                                            ease: "easeOut",
+                                            duration: 1,
+                                        }}
+                                    >
+                                        20%
+                                    </motion.p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-3 mt-20 max-sm:mt-5 max-[400px]:mt-2">
+                            <motion.div
+                                initial={{ x: "100%", opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{
+                                    delay: 1,
+                                    ease: "easeOut",
+                                    duration: 1,
+                                }}
+                            >
+                                <Image
+                                    src={"/icons/Vector1.png"}
+                                    width={100}
+                                    height={10}
+                                    alt=""
+                                    className="max-md:w-20 max-sm:w-10  invert-[50%]"
+                                />
+                            </motion.div>
+                            <motion.p
+                                initial={{ x: "100%", opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{
+                                    delay: 2,
+                                    ease: "easeOut",
+                                    duration: 1,
+                                }}
+                            >
+                                Available Size
+                            </motion.p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );
