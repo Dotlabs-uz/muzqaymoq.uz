@@ -13,31 +13,9 @@ import SuisseIntl from "next/font/local"
 import SecondSwiper from "./components/SecondSwiper";
 import TopingSwiper from "./components/TopingSwiper";
 import StakanSwiper from "./components/StakanSwiper";
+import FormSection from "./components/FormSection";
  
 const myFont = SuisseIntl({ src: '../public/fonts/Suisse Intl/SuisseIntl-Regular.otf' })
-
-const iceCreamArr = [
-    {
-        id:1,
-        src: "",
-    },
-    {
-        id:2,
-        src: "",
-    },
-    {
-        id:3,
-        src: "",
-    },
-    {
-        id:4,
-        src: "",
-    },
-    {
-        id:5,
-        src: "",
-    },
-]
 
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
@@ -78,6 +56,8 @@ export default function Home() {
                         <TopingSwiper />
                         <StakanSwiper />
                         <ThirdSection />
+
+                        <FormSection />
                        
                         <SecondSection />
 

@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, Variants } from "framer-motion";
@@ -14,9 +14,52 @@ const cardVariants: Variants = {
 
 interface SecondSectionProps {}
 
+const iceCreamArr = [
+    {
+        id:1,
+        src: "/image/iceCreamArrImages/banan.webp",
+    },
+    {
+        id:2,
+        src: "/image/iceCreamArrImages/karamel.webp",
+    },
+    {
+        id:3,
+        src: "/image/iceCreamArrImages/kivi.webp",
+    },
+    {
+        id:4,
+        src: "/image/iceCreamArrImages/klubnika.webp",
+    },
+    {
+        id:5,
+        src: "/image/iceCreamArrImages/kovun.webp",
+    },
+    {
+        id:6,
+        src: "/image/iceCreamArrImages/mango.webp",
+    },
+    {
+        id:7,
+        src: "/image/iceCreamArrImages/shakalot.webp",
+    },
+    {
+        id:8,
+        src: "/image/iceCreamArrImages/vanilniy.webp",
+    },
+    {
+        id:9,
+        src: "/image/iceCreamArrImages/white.webp",
+    },
+    {
+        id:10,
+        src: "/image/iceCreamArrImages/yarko_krasniy.webp",
+    },
+]
+
 const ThirdSection: React.FC<SecondSectionProps> = () => {
     return (
-        <section className="mt-20">
+        <section className="my-20">
             <motion.h2
                 initial={'offscreen'}
                 whileInView={'onscreen'}
@@ -64,9 +107,9 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                         },
                     }}
                 >
-                    {[0, 1, 2, 3, 4, 5, 6].map((item: any) => (
-                        <SwiperSlide key={item}>
-                            <ThirdSectionChild />
+                    {iceCreamArr.map((item: any) => (
+                        <SwiperSlide key={item.id}>
+                            <ThirdSectionChild src={item.src}/>
                         </SwiperSlide>
                     ))}
                     <SwiperSlide></SwiperSlide>

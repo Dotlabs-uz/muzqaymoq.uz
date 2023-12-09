@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, Variants } from "framer-motion";

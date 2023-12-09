@@ -1,9 +1,7 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
-interface ThirdSectionChild {}
-
-const ThirdSectionChild = () => {
+const ThirdSectionChild = ({src}:any) => {
 
     return (
         <div className="flex items-start justify-center">
@@ -17,8 +15,8 @@ const ThirdSectionChild = () => {
                         height={165}
                         width={165}
                         alt=""
-                        src={"/image/ice-ping.svg"}
-                        className={`absolute top-1/2 left-1/2 -translate-x-1/2  ease-in-out duration-200 max-xl:w-[290px] max-xl:h-[290px] max-lg:w-[210px] max-lg:h-[210px] max-[400px]:h-[140px] max-[400px]:w-[140px] -translate-y-1/2`}
+                        src={src}
+                        className={`absolute top-1/2 left-1/2 -translate-x-1/2  ease-in-out duration-200 max-xl:w-[150px] max-xl:h-[290px] max-lg:w-[120px] max-lg:h-[210px] max-[400px]:h-[160px] max-[400px]:w-[90px] -translate-y-1/2`}
                     />
                 </div>
                 <div className="flex flex-col items-center justify-center">

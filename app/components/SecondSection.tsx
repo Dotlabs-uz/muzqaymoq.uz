@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { motion, Variants } from "framer-motion";
 
 interface SecondSectionProps {}
@@ -18,8 +16,6 @@ const cardVariants: Variants = {
 };
 
 const SecondSection: React.FC<SecondSectionProps> = () => {
-    const [iceType, setIceType] = useState<any>("1");
-
     return (
         <section className="flex max-lg:flex-col items-center justify-between mt-32 max-sm:mt-10 w-full gap-20 max-xl:gap-10 max-lg:gap-20 max-sm:gap-5 relative py-10 pl-20 max-sm:pl-2">
             <div className="absolute top-0 right-0 w-full h-full rounded-[50px]"></div>
@@ -46,48 +42,36 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     />
 
                     <Image
-                        onClick={() => setIceType("1")}
-                        src={"/image/section2-ice-cream-child.svg"}
+                        src={"/image/topings/rasberry-toping.webp"}
                         alt=""
-                        width={170}
-                        height={170}
+                        width={210}
+                        height={210}
                         className={
-                            "absolute top-[200px] -left-14 max-sm:-left-10 max-sm:top-[150px] max-sm:w-[130px] max-sm:h-[130px] max-[500px]:top-[100px] max-[500px]:-left-5 max-[500px]:w-[90px] max-[500px]:h-[90px] cursor-pointer"
+                            "absolute top-[200px] -left-14 max-2xl:w-[170px] max-2xl:top-[150px] max-xl:w-[150px] max-xl:-left-10 max-lg:w-[170px] max-lg:top-[200px] max-md:top-[180px] max-sm:-left-10 max-sm:top-[150px] max-sm:w-[130px] max-sm:h-[130px] max-[500px]:top-[100px] max-[500px]:-left-5 max-[500px]:w-[90px] max-[500px]:h-[90px] cursor-pointer"
                         }
                     />
 
                     <Image
-                        onClick={() => setIceType("2")}
-                        src={"/image/section2-ice-cream-child.svg"}
+                        src={"/image/smes.webp"}
                         alt=""
-                        width={170}
-                        height={170}
+                        width={150}
+                        height={150}
                         className={
-                            "absolute bottom-0 left-20 max-sm:-bottom-5 max-sm:w-[130px] max-sm:h-[130px] max-[500px]:w-[90px] max-[500px]:h-[90px] cursor-pointer"
+                            "absolute -bottom-4 left-1/2 -translate-x-1/2 max-2xl:w-[100px] max-lg:w-[120px] max-sm:-bottom-5 max-sm:w-[100px] max-[500px]:w-[70px] cursor-pointer"
                         }
                     />
 
                     <Image
-                        onClick={() => setIceType("3")}
-                        src={"/image/section2-ice-cream-child.svg"}
+                        src={"/image/rojoksImages/rojok.webp"}
                         alt=""
-                        width={170}
-                        height={170}
+                        width={110}
+                        height={110}
                         className={
-                            "absolute top-16 -right-2 max-sm:top-10 max-sm:right-0 max-sm:w-[130px] max-sm:h-[130px] max-[500px]:top-5 max-[500px]:right-0 max-[500px]:w-[90px] max-[500px]:h-[90px] cursor-pointer"
+                            "absolute top-[200px] right-0 max-2xl:w-[80px] max-2xl:top-[150px] max-xl:w-[70px] max-lg:w-[90px] max-lg:top-[180px] max-md:top-[160px] max-md:w-[80px] max-sm:top-[150px] max-sm:w-[70px] max-[500px]:top-[100px] max-[500px]:w-[40px] cursor-pointer"
                         }
                     />
 
-                    <Image
-                        onClick={() => setIceType("4")}
-                        src={"/image/section2-ice-cream-child.svg"}
-                        alt=""
-                        width={170}
-                        height={170}
-                        className={
-                            "absolute -right-7 bottom-20 max-sm:w-[130px] max-sm:h-[130px] max-[500px]:bottom-10 max-[500px]:-right-3 max-[500px]:w-[90px] max-[500px]:h-[90px] cursor-pointer"
-                        }
-                    />
+                    
                 </motion.div>
                 <motion.div
                     initial="offscreen"
@@ -127,9 +111,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                             className="pointer-events-none w-[990px] h-[800px] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[55%] -left-[10%]  max-lg:left-0 max-lg:top-1/2 max-md:h-[700px] max-md:top-[50%] max-sm:h-[450px] max-sm:w-[450px] max-sm:top-[120px] -translate-y-1/2 "
                         />
                     </motion.div>
-                    <div
-                        className="text-[#808080] w-full h-auto z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px]"
-                    >
+                    <div className="text-[#808080] w-full h-auto z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px]">
                         <div className="flex items-start gap-3">
                             <motion.div
                                 initial={{ x: "100%", opacity: 0 }}
