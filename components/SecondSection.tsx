@@ -70,8 +70,6 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                             "absolute top-[200px] right-0 max-2xl:w-[80px] max-2xl:top-[150px] max-xl:w-[70px] max-lg:w-[90px] max-lg:top-[180px] max-md:top-[160px] max-md:w-[80px] max-sm:top-[150px] max-sm:w-[70px] max-[500px]:top-[100px] max-[500px]:w-[40px] cursor-pointer"
                         }
                     />
-
-                    
                 </motion.div>
                 <motion.div
                     initial="offscreen"
@@ -111,8 +109,8 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                             className="pointer-events-none w-[990px] h-[800px] max-2xl:w-[900px] max-2xl:h-[95vh] absolute top-[55%] -left-[10%]  max-lg:left-0 max-lg:top-1/2 max-md:h-[700px] max-md:top-[50%] max-sm:h-[450px] max-sm:w-[450px] max-sm:top-[120px] -translate-y-1/2 "
                         />
                     </motion.div>
-                    <div className="text-[#808080] w-full h-auto z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px]">
-                        <div className="flex items-start gap-3">
+                    <div className="text-[#808080] flex items-start flex-col justify-between w-full gap-40 max-2xl:gap-24 max-xl:gap-10 max-lg:gap-60 max-md:gap-32 max-sm:gap-20 z-10 max-md:text-sm max-sm:text-xs max-[400px]:text-[10px]">
+                        <div className="flex items-center gap-3">
                             <motion.div
                                 initial={{ x: "100%", opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
@@ -130,123 +128,17 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                                     className="max-sm:w-10 max-md:w-20 invert-[50%]"
                                 />
                             </motion.div>
-
-                            <div className="flex gap-10 max-sm:gap-5">
-                                <div className="flex flex-col items-start gap-3 max-sm:gap-2">
-                                    <motion.p
-                                        initial={{ x: "100%", opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{
-                                            delay: 2,
-                                            ease: "easeOut",
-                                            duration: 1,
-                                        }}
-                                    >
-                                        Calorie
-                                    </motion.p>
-                                    <motion.p
-                                        initial={{ x: "100%", opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{
-                                            delay: 2.2,
-                                            ease: "easeOut",
-                                            duration: 1,
-                                        }}
-                                    >
-                                        Total fat
-                                    </motion.p>
-                                    <motion.p
-                                        initial={{ x: "100%", opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{
-                                            delay: 2.4,
-                                            ease: "easeOut",
-                                            duration: 1,
-                                        }}
-                                    >
-                                        Protein
-                                    </motion.p>
-                                    <motion.p
-                                        initial={{ x: "100%", opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{
-                                            delay: 2.6,
-                                            ease: "easeOut",
-                                            duration: 1,
-                                        }}
-                                    >
-                                        Vt.D
-                                    </motion.p>
-                                    <motion.p
-                                        initial={{ x: "100%", opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{
-                                            delay: 2.8,
-                                            ease: "easeOut",
-                                            duration: 1,
-                                        }}
-                                    >
-                                        Calcium
-                                    </motion.p>
-                                </div>
-                                <div className="flex max-sm:hidden flex-col items-start gap-3">
-                                    <motion.p
-                                        initial={{ x: "100%", opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{
-                                            delay: 3,
-                                            ease: "easeOut",
-                                            duration: 1,
-                                        }}
-                                    >
-                                        210
-                                    </motion.p>
-                                    <motion.p
-                                        initial={{ x: "100%", opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{
-                                            delay: 3.2,
-                                            ease: "easeOut",
-                                            duration: 1,
-                                        }}
-                                    >
-                                        10%
-                                    </motion.p>
-                                    <motion.p
-                                        initial={{ x: "100%", opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{
-                                            delay: 3.4,
-                                            ease: "easeOut",
-                                            duration: 1,
-                                        }}
-                                    >
-                                        1g
-                                    </motion.p>
-                                    <motion.p
-                                        initial={{ x: "100%", opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{
-                                            delay: 3.6,
-                                            ease: "easeOut",
-                                            duration: 1,
-                                        }}
-                                    >
-                                        0%
-                                    </motion.p>
-                                    <motion.p
-                                        initial={{ x: "100%", opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{
-                                            delay: 3.8,
-                                            ease: "easeOut",
-                                            duration: 1,
-                                        }}
-                                    >
-                                        20%
-                                    </motion.p>
-                                </div>
-                            </div>
+                            <motion.p
+                                initial={{ x: "100%", opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{
+                                    delay: 2,
+                                    ease: "easeOut",
+                                    duration: 1,
+                                }}
+                            >
+                                Aralashma va toping
+                            </motion.p>
                         </div>
                         <div className="flex items-center gap-3 mt-20 max-sm:mt-5 max-[400px]:mt-2">
                             <motion.div
@@ -275,7 +167,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                                     duration: 1,
                                 }}
                             >
-                                Available Size
+                                Vafli
                             </motion.p>
                         </div>
                     </div>

@@ -16,7 +16,7 @@ interface SecondSectionProps {}
 
 const StanokSwiper: React.FC<SecondSectionProps> = () => {
     return (
-        <section className="mt-20">
+        <section className="my-20">
             <motion.h2
                 initial={"offscreen"}
                 whileInView={"onscreen"}

@@ -1,19 +1,20 @@
 "use client";
-import Header from "./components/Header";
-import FirstSection from "./components/FirstSection";
-import SecondSection from "./components/SecondSection";
-import ThirdSection from "./components/ThirdSection";
-import FourthSection from "./components/FourthSection";
-import FifthSection from "./components/FifthSection";
-import Footer from "./components/Footer";
+import Header from "@/components/Header";
+import FirstSection from "@/components/FirstSection";
+import SecondSection from "@/components/SecondSection";
+import ThirdSection from "@/components/ThirdSection";
+import FourthSection from "@/components/FourthSection";
+import FifthSection from "@/components/FifthSection";
+import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Modal from "./components/Modal";
+import Modal from "@/components/Modal";
 import SuisseIntl from "next/font/local"
-import SecondSwiper from "./components/SecondSwiper";
-import TopingSwiper from "./components/TopingSwiper";
-import StakanSwiper from "./components/StakanSwiper";
-import FormSection from "./components/FormSection";
+import SecondSwiper from "@/components/SecondSwiper";
+import TopingSwiper from "@/components/TopingSwiper";
+import StakanSwiper from "@/components/StakanSwiper";
+import FormSection from "@/components/FormSection";
+import StanokSwiper from "@/components/StanokSwiper";
  
 const myFont = SuisseIntl({ src: '../public/fonts/Suisse Intl/SuisseIntl-Regular.otf' })
 
@@ -55,7 +56,7 @@ export default function Home() {
                         <SecondSwiper />
                         <TopingSwiper />
                         <StakanSwiper />
-                        <ThirdSection />
+                        <StanokSwiper />
 
                         <FormSection />
                        
