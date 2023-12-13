@@ -58,7 +58,7 @@ const FormSection = () => {
                         placeholder="Ism"
                         title="name"
                         type="text"
-                        className="border font-medium border-[#032D6C] rounded-md px-5 py-3 max-sm:text-sm max-sm:px-3 max-sm:py-2 bg-[#E6EDF8] w-full"
+                        className="border font-medium rounded-md px-5 py-3 max-sm:text-sm max-sm:px-3 max-sm:py-2 bg-[#E6EDF8] w-full"
                     />
                     <ReactInputMask
                         mask="+\9\98-(99)-999-99-99"
@@ -66,7 +66,7 @@ const FormSection = () => {
                         {...register("number", { required: true })}
                         value={number}
                         onChange={(e: any) => setNumber(e.target.value)}
-                        className="border font-medium border-[#032D6C] rounded-md px-5 py-3 max-sm:text-sm max-sm:px-3 max-sm:py-2 bg-[#E6EDF8] w-full"
+                        className="border font-medium rounded-md px-5 py-3 max-sm:text-sm max-sm:px-3 max-sm:py-2 bg-[#E6EDF8] w-full"
                     ></ReactInputMask>
                     <input
                         {...register("email")}

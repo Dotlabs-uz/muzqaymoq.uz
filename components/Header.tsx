@@ -4,6 +4,7 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion, useCycle } from "framer-motion";
+import Image from "next/image";
 
 const sidebar = {
     open: (height = 1000) => ({
@@ -54,7 +55,7 @@ function Header() {
                     ease: "backOut",
                     duration: 1,
                 }}
-                className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-10 max-sm:py-5 pb-5 w-full  absolute max-lg:fixed top-0 left-0 max-lg:bg-white flex items-center justify-between gap-5"
+                className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-5 max-sm:py-5 pb-5 w-full absolute max-lg:fixed top-0 left-0 max-lg:bg-white flex items-center justify-between gap-5"
             >
                 <div className="flex pr-24 max-[1330px]:pr-0 items-center gap-7 w-[60%] max-lg:w-full justify-between">
                     {isOpen ? (
@@ -71,11 +72,10 @@ function Header() {
                         />
                     )}
 
-                    <p className="font-['lepka'] text-2xl max-sm:text-xl max-[400px]:text-base">
-                        ДИЗАЙН УХУИ СТУДИЯ
-                    </p>
-                    <nav>
-                        <ul className="flex max-lg:hidden items-center gap-5 justify-between font-semibold">
+                    <Image src={'/image/logo.webp'} width={100} height={100} alt="" className="max-xl:w-[70px]"/>
+
+                    <nav className="max-lg:hidden">
+                        <ul className="flex items-center gap-5 justify-between font-semibold">
                             <li>
                                 <a
                                     onClick={(e) => scrollToContent(e, "home")}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const ThirdSectionChild = ({src}:any) => {
+const ThirdSectionChild = ({src, title}:any) => {
 
     return (
         <div className="flex items-start justify-center">
@@ -19,21 +19,21 @@ const ThirdSectionChild = ({src}:any) => {
                         className={`absolute top-1/2 left-1/2 -translate-x-1/2  ease-in-out duration-200 max-xl:w-[150px] max-xl:h-[290px] max-lg:w-[120px] max-lg:h-[210px] max-[400px]:h-[160px] max-[400px]:w-[90px] -translate-y-1/2`}
                     />
                 </div>
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col gap-10 items-center justify-center">
                     <p
                         className={`font-semibold text-[#2A1B68] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl`}
                     >
-                        BLUEBERRY MINT
+                        {title}
                     </p>
-                    <p
+                    {/* <p
                         className={`font-semibold text-white my-3 max-lg:my-2 ease-in-out duration-200  max-md:text-lg max-lg:text-xl text-2xl `}
                     >
                         100$
-                    </p>
+                    </p> */}
                     <button
-                        className={`w-1/2 max-md:w-3/4 bg-[#2A1B68] text-white py-3 max-lg:py-2 rounded-xl  ease-in-out duration-200  max-md:text-sm  max-lg:text-base text-lg`}
+                        className={`w-fit bg-[#2A1B68] text-white px-5 py-3 max-lg:py-2 rounded-xl  ease-in-out duration-200  max-md:text-sm  max-lg:text-base text-lg`}
                     >
-                        Купить
+                        Buyurtma qilish
                     </button>
                 </div>
             </div>

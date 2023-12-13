@@ -1,5 +1,4 @@
 // "use client";
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, Variants } from "framer-motion";
 import ThirdSectionChild from "./ThirdSectionChild";
@@ -16,50 +15,65 @@ interface SecondSectionProps {}
 
 const iceCreamArr = [
     {
+        id:0,
+        src: "/image/iceCreamArrImages/white.webp",
+        title:"McDonald's ta'mli"
+    },
+    {
         id:1,
         src: "/image/iceCreamArrImages/banan.webp",
+        title:"Banan ta'mli"
     },
     {
         id:2,
         src: "/image/iceCreamArrImages/karamel.webp",
+        title:"Karamel ta'mli"
     },
     {
         id:3,
         src: "/image/iceCreamArrImages/kivi.webp",
+        title:"Kivi ta'mli"
     },
     {
         id:4,
         src: "/image/iceCreamArrImages/klubnika.webp",
+        title:"Qulupnay ta'mli"
     },
     {
         id:5,
         src: "/image/iceCreamArrImages/kovun.webp",
+        title:"Qovun ta'mli"
     },
     {
         id:6,
         src: "/image/iceCreamArrImages/mango.webp",
+        title:"Mango ta'mli"
     },
     {
         id:7,
         src: "/image/iceCreamArrImages/shakalot.webp",
+        title:"Chocolate ta'mli"
     },
     {
         id:8,
         src: "/image/iceCreamArrImages/vanilniy.webp",
+        title:"Vanilla ta'mli"
     },
     {
         id:9,
         src: "/image/iceCreamArrImages/white.webp",
+        title:"Plombir"
     },
     {
         id:10,
         src: "/image/iceCreamArrImages/yarko_krasniy.webp",
+        title:"Tarbuz ta'mli"
     },
 ]
 
 const ThirdSection: React.FC<SecondSectionProps> = () => {
     return (
-        <section className="my-20">
+        <section className="mb-20 mt-40">
             <motion.h2
                 initial={'offscreen'}
                 whileInView={'onscreen'}
@@ -73,7 +87,7 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                 className='text-4xl font-["lepka"]'
                 id="catalog"
             >
-                Popular product
+                Muzqaymoq aralashmalari
             </motion.h2>
 
             <motion.div
@@ -109,9 +123,10 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                 >
                     {iceCreamArr.map((item: any) => (
                         <SwiperSlide key={item.id}>
-                            <ThirdSectionChild src={item.src}/>
+                            <ThirdSectionChild src={item.src} title={item.title}/>
                         </SwiperSlide>
                     ))}
+                    <SwiperSlide></SwiperSlide>
                     <SwiperSlide></SwiperSlide>
                 </Swiper>
             </motion.div>
