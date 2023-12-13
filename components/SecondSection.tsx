@@ -44,10 +44,10 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     <Image
                         src={"/image/topings/rasberry-toping.webp"}
                         alt=""
-                        width={210}
-                        height={210}
+                        width={200}
+                        height={200}
                         className={
-                            "absolute top-[200px] -left-14 max-2xl:w-[170px] max-2xl:top-[150px] max-xl:w-[150px] max-xl:-left-10 max-lg:w-[170px] max-lg:top-[200px] max-md:top-[180px] max-sm:-left-10 max-sm:top-[150px] max-sm:w-[130px] max-sm:h-[130px] max-[500px]:top-[100px] max-[500px]:-left-5 max-[500px]:w-[90px] max-[500px]:h-[90px] cursor-pointer"
+                            "absolute top-[200px] -left-14 max-[1700px]:w-[170px] max-[1700px]:top-[150px] max-xl:w-[150px] max-xl:-left-10 max-lg:w-[170px] max-lg:top-[200px] max-md:top-[180px] max-sm:-left-10 max-sm:top-[150px] max-sm:w-[130px] max-sm:h-[130px] max-[500px]:top-[100px] max-[500px]:-left-5 max-[500px]:w-[90px] max-[500px]:h-[90px] cursor-pointer"
                         }
                     />
 
@@ -57,7 +57,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                         width={150}
                         height={150}
                         className={
-                            "absolute -bottom-4 left-1/2 -translate-x-1/2 max-2xl:w-[100px] max-lg:w-[120px] max-sm:-bottom-5 max-sm:w-[100px] max-[500px]:w-[70px] cursor-pointer"
+                            "absolute -bottom-4 left-1/2 -translate-x-1/2 max-[1700px]:w-[100px] max-lg:w-[120px] max-sm:-bottom-5 max-sm:w-[100px] max-[500px]:w-[70px] cursor-pointer"
                         }
                     />
 
@@ -67,7 +67,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                         width={110}
                         height={110}
                         className={
-                            "absolute top-[200px] right-0 max-2xl:w-[80px] max-2xl:top-[150px] max-xl:w-[70px] max-lg:w-[90px] max-lg:top-[180px] max-md:top-[160px] max-md:w-[80px] max-sm:top-[150px] max-sm:w-[70px] max-[500px]:top-[100px] max-[500px]:w-[40px] cursor-pointer"
+                            "absolute top-[200px] right-0 max-[1700px]:w-[80px] max-[1700px]:top-[150px] max-xl:w-[70px] max-lg:w-[90px] max-lg:top-[180px] max-md:top-[160px] max-md:w-[80px] max-sm:top-[150px] max-sm:w-[70px] max-[500px]:top-[100px] max-[500px]:w-[40px] cursor-pointer"
                         }
                     />
                 </motion.div>
