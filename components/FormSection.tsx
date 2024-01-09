@@ -47,7 +47,7 @@ const FormSection = () => {
     };
 
     return (
-        <div className="max-w-3xl max-2xl:max-w-2xl  max-xl:max-w-xl  max-lg:max-w-lg  max-md:max-w-md mx-auto p-5 bg-[#9D93C2] shadow-md rounded-md">
+        <div className="max-w-3xl max-2xl:max-w-2xl  max-xl:max-w-xl  max-lg:max-w-lg  max-md:max-w-md mx-auto p-5 bg-[#53C9ED] shadow-md rounded-md">
             <form
                     onSubmit={handleSubmit(onSubmit)}
                     className="flex flex-col justify-center items-center gap-3 w-[70%] max-sm:w-[90%] mt-5 m-auto"
@@ -76,7 +76,7 @@ const FormSection = () => {
                     />
                     <button
                         type="submit"
-                        className="bg-[#032D6C] text-center text-[#E6EDF8] max-sm:text-sm px-5 py-3 max-sm:px-3 max-sm:py-2 rounded-md w"
+                        className="bg-[#0c88ad] text-center text-[#E6EDF8] max-sm:text-sm px-5 py-3 max-sm:px-3 max-sm:py-2 rounded-md w"
                     >
                         Buyurtma berish
                     </button>

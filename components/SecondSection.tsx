@@ -91,7 +91,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                 </motion.div>
             </div>
 
-            <p className="text-9xl max-lg:rotate-90 z-10 text-[#bcbdb7]">=</p>
+            <p className="text-9xl z-10 text-[#bcbdb7]">=</p>
 
             <div className="w-full relative">
                 <div className="w-full flex max-lg:gap-40 max-sm:gap-20 items-start max-lg:items-center max-sm:items-start max-lg:translate-y-10 max-lg:h-[700px] max-md:h-[550px] max-sm:h-[300px] justify-between">

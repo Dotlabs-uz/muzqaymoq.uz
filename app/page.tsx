@@ -37,7 +37,7 @@ export default function Home() {
     return (
         <>
             {isLoading ? (
-                <main className="w-full h-screen bg-[#E9EDDF] flex items-center justify-center">
+                <main className="w-full h-screen bg-white flex items-center justify-center">
                     <Image
                         src={"/image/preloader.svg"}
                         width={400}
@@ -49,7 +49,7 @@ export default function Home() {
             ) : (
                 <>
                 <Header />
-                <main id="home" className={`${myFont.className} bg-[#E9EDDF] overflow-hidden`}>
+                <main id="home" className={`${myFont.className} bg-white overflow-hidden`}>
                     <div className="max-w-[1920px] m-auto mt-28 relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] px-24 max-[1330px]:px-16 max-sm:px-7">
 
                         <ThirdSection />
