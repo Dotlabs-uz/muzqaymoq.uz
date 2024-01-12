@@ -72,7 +72,7 @@ function Header() {
                         />
                     )}
 
-                    <Image src={'/image/logo.webp'} width={100} height={100} alt="" className="max-xl:w-[70px]"/>
+                    <Image src={'/ICE_LOGO-removebg-preview.png'} width={200} height={200} alt="" className="w-[200px] h-[100px] max-xl:w-[70px]"/>
 
                     <nav className="max-lg:hidden">
                         <ul className="flex items-center gap-5 justify-between font-semibold">
