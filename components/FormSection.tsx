@@ -51,7 +51,7 @@ const FormSection = () => {
             <form
                     onSubmit={handleSubmit(onSubmit)}
                     className="flex flex-col justify-center items-center gap-3 w-[70%] max-sm:w-[90%] mt-5 m-auto"
-                    action=""
+                    id="form_tg"
                 >
                     <input
                         {...register("name")}

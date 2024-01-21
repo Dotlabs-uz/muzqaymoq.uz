@@ -13,7 +13,7 @@ const cardVariants: Variants = {
     onscreen2: { x: 0 },
 };
 
-interface SecondSectionProps {}
+interface SecondSectionProps {scrollToContent:any}
 
 const TopingSwiper: React.FC<SecondSectionProps> = () => {
     return (
@@ -215,7 +215,6 @@ const TopingSwiper: React.FC<SecondSectionProps> = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide></SwiperSlide>
                     <SwiperSlide></SwiperSlide>
                 </Swiper>
             </motion.div>

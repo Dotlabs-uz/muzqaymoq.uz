@@ -72,18 +72,10 @@ function Header() {
                         />
                     )}
 
-                    <Image src={'/ICE_LOGO-removebg-preview.png'} width={200} height={200} alt="" className="w-[200px] h-[100px] max-xl:w-[70px]"/>
+                    <Image src={'/muzqaymoquz logo+ (2).png'} width={300} height={250} alt="" className="max-xl:w-[300px] max-lg:w-[250px] max-sm:w-[200px]"/>
 
                     <nav className="max-lg:hidden">
                         <ul className="flex items-center gap-5 justify-between font-semibold">
-                            <li>
-                                <a
-                                    onClick={(e) => scrollToContent(e, "home")}
-                                    className={"cursor-pointer"}
-                                >
-                                    <p>Домой</p>
-                                </a>
-                            </li>
                             <li>
                                 <a
                                     onClick={(e) =>
@@ -91,7 +83,7 @@ function Header() {
                                     }
                                     className={"cursor-pointer"}
                                 >
-                                    <p>Каталог</p>
+                                    <p>Maxsulotlar</p>
                                 </a>
                             </li>
                             <li>
@@ -101,7 +93,7 @@ function Header() {
                                     }
                                     className={"cursor-pointer"}
                                 >
-                                    <p>Контакты</p>
+                                    <p>Kontaktlar</p>
                                 </a>
                             </li>
                         </ul>

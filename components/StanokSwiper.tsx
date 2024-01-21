@@ -12,9 +12,11 @@ const cardVariants: Variants = {
     onscreen2: { x: 0 },
 };
 
-interface SecondSectionProps {}
+interface SecondSectionProps {
+    scrollToContent:any
+}
 
-const StanokSwiper: React.FC<SecondSectionProps> = () => {
+const StanokSwiper: React.FC<SecondSectionProps> = ({scrollToContent}) => {
     return (
         <section className="my-20">
             <motion.h2

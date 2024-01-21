@@ -12,11 +12,13 @@ const cardVariants: Variants = {
     onscreen2: { x: 0 },
 };
 
-interface SecondSectionProps {}
+interface SecondSectionProps {
+    scrollToContent:any
+}
 
-const SecondSwiper: React.FC<SecondSectionProps> = () => {
+const SecondSwiper: React.FC<SecondSectionProps> = ({scrollToContent}) => {
     return (
-        <section className="mt-20">
+        <section className="mt-20 max-sm:mt-5">
             <motion.h2
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -27,7 +29,7 @@ const SecondSwiper: React.FC<SecondSectionProps> = () => {
                     ease: "backOut",
                     duration: 3,
                 }}
-                className='text-4xl font-["lepka"]'
+                className='text-4xl max-sm:text-2xl font-["lepka"]'
                 id="catalog"
             >
                 Vaflilar
@@ -43,7 +45,7 @@ const SecondSwiper: React.FC<SecondSectionProps> = () => {
                     ease: "backOut",
                     duration: 2,
                 }}
-                className="relative mt-5 h-auto"
+                className="relative mt-5 max-sm:mt-2 h-auto"
             >
                 <Swiper
                     className="w-[120vw] h-auto"

@@ -12,9 +12,11 @@ const cardVariants: Variants = {
     onscreen2: { x: 0 },
 };
 
-interface SecondSectionProps {}
+interface SecondSectionProps {
+    scrollToContent:any
+}
 
-const StakanSwiper: React.FC<SecondSectionProps> = () => {
+const StakanSwiper: React.FC<SecondSectionProps> = ({scrollToContent}) => {
     return (
         <section className="mt-20">
             <motion.h2

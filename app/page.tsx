@@ -9,14 +9,32 @@ import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Modal from "@/components/Modal";
-import SuisseIntl from "next/font/local"
+import SuisseIntl from "next/font/local";
 import SecondSwiper from "@/components/SecondSwiper";
 import TopingSwiper from "@/components/TopingSwiper";
 import StakanSwiper from "@/components/StakanSwiper";
 import FormSection from "@/components/FormSection";
 import StanokSwiper from "@/components/StanokSwiper";
- 
-const myFont = SuisseIntl({ src: '../public/fonts/Suisse Intl/SuisseIntl-Regular.otf' })
+
+const myFont = SuisseIntl({
+    src: "../public/fonts/Suisse Intl/SuisseIntl-Regular.otf",
+});
+
+const scrollToContent = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    contentId: string
+) => {
+    e.preventDefault();
+
+    const content = document.getElementById(contentId);
+    if (content) {
+        content.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
+        });
+    }
+};
 
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
@@ -48,30 +66,31 @@ export default function Home() {
                 </main>
             ) : (
                 <>
-                <Header />
-                <main id="home" className={`${myFont.className} bg-white overflow-hidden`}>
-                    <div className="max-w-[1920px] m-auto mt-28 relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] px-24 max-[1330px]:px-16 max-sm:px-7">
+                    <Header />
+                    <main
+                        id="home"
+                        className={`${myFont.className} bg-white overflow-hidden`}
+                    >
+                        <div className="max-w-[1920px] m-auto relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] px-24 max-[1330px]:px-16 max-sm:px-7">
+                            <ThirdSection scrollToContent={scrollToContent} />
+                            <SecondSwiper scrollToContent={scrollToContent} />
+                            <TopingSwiper scrollToContent={scrollToContent} />
+                            <StakanSwiper scrollToContent={scrollToContent} />
+                            <StanokSwiper scrollToContent={scrollToContent} />
 
-                        <ThirdSection />
-                        <SecondSwiper />
-                        <TopingSwiper />
-                        <StakanSwiper />
-                        <StanokSwiper />
+                            <FormSection />
 
-                        <FormSection />
-                       
-                        <SecondSection />
+                            <SecondSection />
 
+                            <FourthSection />
 
-                        <FourthSection />
-
-                        <FifthSection />
-                    </div>
-                    {
-                        modalHandel ? <Modal setModalHendel={setModalHendel}/> : null
-                    }
-                </main>
-                <Footer />
+                            <FifthSection />
+                        </div>
+                        {modalHandel ? (
+                            <Modal setModalHendel={setModalHendel} />
+                        ) : null}
+                    </main>
+                    <Footer />
                 </>
             )}
         </>

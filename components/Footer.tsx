@@ -7,36 +7,25 @@ const Footer: React.FC<FooterSectionProps> = () => {
     return (
         <footer
             id="contact"
-            className="flex justify-center max-sm:flex-col gap-32 max-lg:gap-9 bg-[#D0CECC] pt-10 px-20 pb-20 max-sm:px-10 max-sm:pb-10"
+            className="flex max-lg:flex-col justify-center max-sm:flex-col gap-32 max-lg:gap-9 bg-[#D0CECC] pt-10 px-20 pb-20 max-sm:px-10 max-sm:pb-10"
         >
             <div>
                 <Image
-                    src={"/ICE_LOGO-removebg-preview.png"}
-                    width={200}
+                    src={"/muzqaymoquz logo+ (2).png"}
+                    width={400}
                     height={200}
                     alt=""
-                    className="w-[200px] h-[100px] max-xl:w-[70px]"
+                    className="max-2xl:w-[350px] max-2xl:hidden"
                 />
             </div>
-            {/* <div>
-                <h3 className="text-white text-2xl">Hamkorlar</h3>
-                <ol className="text-white mt-4">
-                    <li>hamkor</li>
-                    <li className="mt-1">hamkor</li>
-                    <li className="mt-1">hamkor</li>
-                    <li className="mt-1">hamkor</li>
-                </ol>
-            </div> */}
-            {/* <div>
-                <h3 className="text-white text-2xl">Adres</h3>
-                <ol className="text-white mt-4">
-                    <li>Samarqnd, Samarqand</li>
-                    <li className="mt-1">Samarqnd, Samarqand</li>
-                    <li className="mt-1">Samarqnd, Samarqand</li>
-                    <li className="mt-1">Samarqnd, Samarqand</li>
-                </ol>
-            </div> */}
             <div>
+            <Image
+                    src={"/muzqaymoquz logo+ (2).png"}
+                    width={350}
+                    height={200}
+                    alt=""
+                    className="hidden max-2xl:block mb-5"
+                />
                 <h3 className="text-2xl">Kontaktlar</h3>
                 <ol className="mt-4">
                     <li>
@@ -56,6 +45,7 @@ const Footer: React.FC<FooterSectionProps> = () => {
                     width="493"
                     height="244"
                     frameBorder="0"
+                    className="max-xl:w-[350px] max-xl:h-[200px] max-sm:w-[320px]"
                 ></iframe>
             </div>
         </footer>

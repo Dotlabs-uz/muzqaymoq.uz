@@ -11,7 +11,9 @@ const cardVariants: Variants = {
     onscreen2: { x: 0},
   };
 
-interface SecondSectionProps {}
+interface SecondSectionProps {
+    scrollToContent:any
+}
 
 const iceCreamArr = [
     {
@@ -71,9 +73,9 @@ const iceCreamArr = [
     },
 ]
 
-const ThirdSection: React.FC<SecondSectionProps> = () => {
+const ThirdSection: React.FC<SecondSectionProps> = ({scrollToContent}) => {
     return (
-        <section className="mb-20 mt-40">
+        <section className="mb-20 mt-32 max-sm:mt-24">
             <motion.h2
                 initial={'offscreen'}
                 whileInView={'onscreen'}
@@ -84,7 +86,7 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                     ease: "backOut",
                     duration: 3,
                 }}
-                className='text-4xl font-["lepka"]'
+                className='text-4xl max-sm:text-2xl font-["lepka"]'
                 id="catalog"
             >
                 Muzqaymoq aralashmalari
@@ -100,7 +102,7 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                     ease: "backOut",
                     duration: 2,
                 }}
-                className="relative mt-5 h-auto"
+                className="relative mt-5 max-sm:mt-2 h-auto"
             >
                 <Swiper
                     className="w-[120vw] h-auto"
@@ -123,10 +125,9 @@ const ThirdSection: React.FC<SecondSectionProps> = () => {
                 >
                     {iceCreamArr.map((item: any) => (
                         <SwiperSlide key={item.id}>
-                            <ThirdSectionChild src={item.src} title={item.title}/>
+                            <ThirdSectionChild scrollToContent={scrollToContent} src={item.src} title={item.title}/>
                         </SwiperSlide>
                     ))}
-                    <SwiperSlide></SwiperSlide>
                     <SwiperSlide></SwiperSlide>
                 </Swiper>
             </motion.div>
