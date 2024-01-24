@@ -55,9 +55,9 @@ function Header() {
                     ease: "backOut",
                     duration: 1,
                 }}
-                className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-5 max-sm:py-5 pb-5 w-full absolute max-lg:fixed top-0 left-0 max-lg:bg-white flex items-center justify-between gap-5"
+                className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-5 pb-5 max-sm:py-4 w-full absolute max-lg:fixed top-0 left-0 bg-white flex items-center justify-between gap-5"
             >
-                <div className="flex pr-24 max-[1330px]:pr-0 items-center gap-7 w-[60%] max-lg:w-full justify-between">
+                <div className="flex pr-24 max-[1330px]:pr-0 items-center gap-7 w-full justify-between">
                     {isOpen ? (
                         <AiOutlineClose
                             size={30}
@@ -79,21 +79,11 @@ function Header() {
                             <li>
                                 <a
                                     onClick={(e) =>
-                                        scrollToContent(e, "catalog")
-                                    }
-                                    className={"cursor-pointer"}
-                                >
-                                    <p>Maxsulotlar</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    onClick={(e) =>
                                         scrollToContent(e, "contact")
                                     }
                                     className={"cursor-pointer"}
                                 >
-                                    <p>Kontaktlar</p>
+                                    <button className="font-bold px-3 py-2 rounded-md text-white bg-[#53C9ED] hover:shadow-lg hover:bg-[#00baf3] transition ease-linear">Kontaktlar</button>
                                 </a>
                             </li>
                         </ul>
@@ -106,35 +96,11 @@ function Header() {
                 transition={{ delay: 0, ease: "anticipate", duration: 0.5 }}
                 variants={sidebar}
                 className={
-                    "hidden max-lg:block fixed z-40 left-0  w-full h-screen bg-[#E9EDDF]"
+                    "hidden max-lg:block fixed z-40 left-0  w-full h-screen bg-white"
                 }
             >
                 <div className="pt-32 pl-10 text-4xl font-semibold flex flex-col h-[85vh] items-start justify-between">
                     <ul>
-                        <li>
-                            <a
-                                onClick={(e) => {
-                                    toggleOpen();
-                                    scrollToContent(e, "home");
-                                }}
-                                href={'#home'}
-                                className={"cursor-pointer"}
-                            >
-                                Домой
-                            </a>
-                        </li>
-                        <li className="mt-4">
-                            <a
-                                onClick={(e) => {
-                                    toggleOpen();
-                                    scrollToContent(e, "catalog");
-                                }}
-                                href={'#catalog'}
-                                className={"cursor-pointer"}
-                            >
-                                Каталог
-                            </a>
-                        </li>
                         <li className="mt-4">
                             <a
                                 onClick={(e) => {
@@ -144,7 +110,7 @@ function Header() {
                                 className={"cursor-pointer"}
                                 href={'#contact'}
                             >
-                                Соц Сети
+                                Kontaktlar
                             </a>
                         </li>
                     </ul>

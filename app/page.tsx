@@ -15,6 +15,7 @@ import TopingSwiper from "@/components/TopingSwiper";
 import StakanSwiper from "@/components/StakanSwiper";
 import FormSection from "@/components/FormSection";
 import StanokSwiper from "@/components/StanokSwiper";
+import { ModalContext } from "@/context/ModalContext";
 
 const myFont = SuisseIntl({
     src: "../public/fonts/Suisse Intl/SuisseIntl-Regular.otf",
@@ -52,6 +53,10 @@ export default function Home() {
         return () => clearTimeout(timeout);
     }, []);
 
+    const modalHandelFunk = (item:boolean) => {
+        setModalHendel(item)
+    }
+
     return (
         <>
             {isLoading ? (
@@ -71,12 +76,13 @@ export default function Home() {
                         id="home"
                         className={`${myFont.className} bg-white overflow-hidden`}
                     >
-                        <div className="max-w-[1920px] m-auto relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] px-24 max-[1330px]:px-16 max-sm:px-7">
-                            <ThirdSection scrollToContent={scrollToContent} />
-                            <SecondSwiper scrollToContent={scrollToContent} />
-                            <TopingSwiper scrollToContent={scrollToContent} />
-                            <StakanSwiper scrollToContent={scrollToContent} />
-                            <StanokSwiper scrollToContent={scrollToContent} />
+                        <ModalContext.Provider value={{modalHandelFunk}}>
+                        <div className="max-w-[1920px] m-auto relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] px-24 max-[1330px]:px-16 max-sm:px-5">
+                            <ThirdSection />
+                            <SecondSwiper />
+                            <TopingSwiper />
+                            <StakanSwiper />
+                            <StanokSwiper />
 
                             <FormSection />
 
@@ -86,6 +92,7 @@ export default function Home() {
 
                             <FifthSection />
                         </div>
+                        </ModalContext.Provider>
                         {modalHandel ? (
                             <Modal setModalHendel={setModalHendel} />
                         ) : null}

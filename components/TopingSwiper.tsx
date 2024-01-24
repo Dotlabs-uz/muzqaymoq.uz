@@ -1,10 +1,44 @@
 // "use client";
-import React from "react";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, Variants } from "framer-motion";
 import ThirdSectionChild from "./ThirdSectionChild";
 import "swiper/css";
 import Image from "next/image";
+import { ModalContext } from "@/context/ModalContext";
+
+const TopingArr = [
+    {
+        id: 0,
+        src: "/image/topings/banan-toping.webp",
+        title: "Banan ta'mli",
+    },
+    {
+        id: 1,
+        src: "/image/topings/berries-toping.webp",
+        title: "Caramel ta'mli",
+    },
+    {
+        id: 2,
+        src: "/image/topings/mango-toping.webp",
+        title: "Shokolad ta'mli",
+    },
+    {
+        id: 3,
+        src: "/image/topings/maple-toping.webp",
+        title: "Qora shokolad",
+    },
+    {
+        id: 4,
+        src: "/image/topings/rasberry-toping.webp",
+        title: "Kiwi ta'mli",
+    },
+    {
+        id: 5,
+        src: "/image/topings/vanilla-toping.webp",
+        title: "Macdonald",
+    },
+];
 
 const cardVariants: Variants = {
     offscreen: { x: "-20%", opacity: 0 },
@@ -13,11 +47,13 @@ const cardVariants: Variants = {
     onscreen2: { x: 0 },
 };
 
-interface SecondSectionProps {scrollToContent:any}
+interface SecondSectionProps {}
 
 const TopingSwiper: React.FC<SecondSectionProps> = () => {
+    const { modalHandelFunk } = useContext(ModalContext);
+
     return (
-        <section className="mt-20">
+        <section className="mt-20 max-sm:mt-7">
             <motion.h2
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -28,7 +64,7 @@ const TopingSwiper: React.FC<SecondSectionProps> = () => {
                     ease: "backOut",
                     duration: 3,
                 }}
-                className='text-4xl font-["lepka"]'
+                className='text-4xl max-sm:text-xl font-["lepka"]'
                 id="catalog"
             >
                 Topping va bezaklar
@@ -54,167 +90,51 @@ const TopingSwiper: React.FC<SecondSectionProps> = () => {
                         1668: {
                             slidesPerView: 6,
                         },
-                        769: {
+                        500: {
                             slidesPerView: 4,
                         },
-                        600: {
-                            slidesPerView: 3,
-                        },
                         0: {
-                            slidesPerView: 2,
+                            slidesPerView: 3,
+                            spaceBetween:10,
                         },
                     }}
                 >
-                    <SwiperSlide>
-                        <div className="flex items-start justify-center">
-                            <div className="bg-[#53C9ED] w-full h-[550px] max-lg:h-[400px]  max-[400px]:h-[320px] ease-linear duration-200 max-2xl:w-[400px] rounded-3xl max-lg:rounded-2xl flex flex-col justify-between gap-10 max-[400px]:gap-2 cursor-pointer items-center py-10 max-lg:py-5">
-                                <div
-                                    className={`bg-[#0c88ad] rounded-full relative ease-in-out duration-200  max-[400px]:h-[120px]  max-[400px]:w-[120px] max-lg:h-[180px]  max-lg:w-[180px] w-[250px] h-[250px] max-xl:w-[230px] max-xl:h-[230px]`}
-                                >
-                                    <Image
-                                        height={300}
-                                        width={340}
-                                        alt=""
-                                        src={"/image/topings/banan-toping.webp"}
-                                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[280px] max-lg:h-[200px] max-[400px]:h-[140px] ease-in-out duration-200  -translate-y-1/2`}
-                                    />
-                                </div>
-                                <div className="flex flex-col items-center ga justify-center gap-10">
-                                    <p
-                                        className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl`}
+                    {TopingArr.map((item) => (
+                        <SwiperSlide key={item.id}>
+                            <div className="flex items-start justify-center">
+                                <div className="bg-[#53C9ED] w-full h-[550px] max-lg:h-[400px] max-sm:h-[240px] ease-linear duration-200 max-2xl:w-[400px] rounded-3xl max-lg:rounded-2xl flex flex-col justify-between gap-10 max-sm:gap-2 cursor-pointer items-center py-10 max-lg:py-5">
+                                    <div
+                                        className={`bg-[#0c88ad] rounded-full relative ease-in-out duration-200  max-sm:h-[100px]  max-sm:w-[100px] max-lg:h-[180px]  max-lg:w-[180px] w-[250px] h-[250px] max-xl:w-[230px] max-xl:h-[230px]`}
                                     >
-                                        BLUEBERRY MINT
-                                    </p>
-                                    
-                                    <button
-                                        className={`w-fit bg-[#0c88ad] text-white px-5 py-3 max-lg:py-2 rounded-xl  ease-in-out duration-200  max-md:text-sm  max-lg:text-base text-lg`}
-                                    >
-                                        Buyurtma qilish
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="flex items-start justify-center">
-                            <div className="bg-[#53C9ED] w-full h-[550px] max-lg:h-[400px]  max-[400px]:h-[320px] ease-linear duration-200 max-2xl:w-[400px] rounded-3xl max-lg:rounded-2xl flex flex-col justify-between gap-10 max-[400px]:gap-2 cursor-pointer items-center py-10 max-lg:py-5">
-                                <div
-                                    className={`bg-[#0c88ad] rounded-full relative ease-in-out duration-200  max-[400px]:h-[120px]  max-[400px]:w-[120px] max-lg:h-[180px]  max-lg:w-[180px] w-[250px] h-[250px] max-xl:w-[230px] max-xl:h-[230px]`}
-                                >
-                                    <Image
-                                        height={300}
-                                        width={340}
-                                        alt=""
-                                        src={"/image/topings/berries-toping.webp"}
-                                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[280px] max-lg:h-[200px] max-[400px]:h-[140px] ease-in-out duration-200  -translate-y-1/2`}
-                                    />
-                                </div>
-                                <div className="flex flex-col items-center ga justify-center gap-10">
-                                    <p
-                                        className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl`}
-                                    >
-                                        BLUEBERRY MINT
-                                    </p>
-                                    
-                                    <button
-                                        className={`w-fit bg-[#0c88ad] text-white px-5 py-3 max-lg:py-2 rounded-xl  ease-in-out duration-200  max-md:text-sm  max-lg:text-base text-lg`}
-                                    >
-                                        Buyurtma qilish
-                                    </button>
+                                        <Image
+                                            height={200}
+                                            width={300}
+                                            alt=""
+                                            src={item.src}
+                                            className={`absolute top-1/2 left-1/2 -translate-x-1/2  ease-in-out duration-200 max-xl:w-[230px] max-lg:w-[200px] max-sm:w-[100px] -translate-y-1/2`}
+                                        />
+                                    </div>
+                                    <div className="flex flex-col gap-10 max-sm:gap-3 items-center justify-center">
+                                        <p
+                                            className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl max-sm:text-sm`}
+                                        >
+                                            {item.title}
+                                        </p>
+
+                                        <button
+                                            onClick={() =>
+                                                modalHandelFunk(true)
+                                            }
+                                            className={`w-fit bg-[#0c88ad] text-white px-5 py-3 max-lg:py-2 max-sm:px-3 max-sm:py-1 rounded-xl  ease-in-out duration-200  max-md:text-sm  max-lg:text-base text-lg max-sm:text-sm max-[360px]:text-xs`}
+                                        >
+                                            Buyurtma qilish
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="flex items-start justify-center">
-                            <div className="bg-[#53C9ED] w-full h-[550px] max-lg:h-[400px]  max-[400px]:h-[320px] ease-linear duration-200 max-2xl:w-[400px] rounded-3xl max-lg:rounded-2xl flex flex-col justify-between gap-10 max-[400px]:gap-2 cursor-pointer items-center py-10 max-lg:py-5">
-                                <div
-                                    className={`bg-[#0c88ad] rounded-full relative ease-in-out duration-200  max-[400px]:h-[120px]  max-[400px]:w-[120px] max-lg:h-[180px]  max-lg:w-[180px] w-[250px] h-[250px] max-xl:w-[230px] max-xl:h-[230px]`}
-                                >
-                                    <Image
-                                        height={300}
-                                        width={340}
-                                        alt=""
-                                        src={"/image/topings/mango-toping.webp"}
-                                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[280px] max-lg:h-[200px] max-[400px]:h-[140px] ease-in-out duration-200  -translate-y-1/2`}
-                                    />
-                                </div>
-                                <div className="flex flex-col items-center ga justify-center gap-10">
-                                    <p
-                                        className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl`}
-                                    >
-                                        BLUEBERRY MINT
-                                    </p>
-                                    
-                                    <button
-                                        className={`w-fit bg-[#0c88ad] text-white px-5 py-3 max-lg:py-2 rounded-xl  ease-in-out duration-200  max-md:text-sm  max-lg:text-base text-lg`}
-                                    >
-                                        Buyurtma qilish
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="flex items-start justify-center">
-                            <div className="bg-[#53C9ED] w-full h-[550px] max-lg:h-[400px]  max-[400px]:h-[320px] ease-linear duration-200 max-2xl:w-[400px] rounded-3xl max-lg:rounded-2xl flex flex-col justify-between gap-10 max-[400px]:gap-2 cursor-pointer items-center py-10 max-lg:py-5">
-                                <div
-                                    className={`bg-[#0c88ad] rounded-full relative ease-in-out duration-200  max-[400px]:h-[120px]  max-[400px]:w-[120px] max-lg:h-[180px]  max-lg:w-[180px] w-[250px] h-[250px] max-xl:w-[230px] max-xl:h-[230px]`}
-                                >
-                                    <Image
-                                        height={300}
-                                        width={340}
-                                        alt=""
-                                        src={"/image/topings/rasberry-toping.webp"}
-                                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[280px] max-lg:h-[200px] max-[400px]:h-[140px] ease-in-out duration-200  -translate-y-1/2`}
-                                    />
-                                </div>
-                                <div className="flex flex-col items-center ga justify-center gap-10">
-                                    <p
-                                        className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl`}
-                                    >
-                                        BLUEBERRY MINT
-                                    </p>
-                                    
-                                    <button
-                                        className={`w-fit bg-[#0c88ad] text-white px-5 py-3 max-lg:py-2 rounded-xl  ease-in-out duration-200  max-md:text-sm  max-lg:text-base text-lg`}
-                                    >
-                                        Buyurtma qilish
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="flex items-start justify-center">
-                            <div className="bg-[#53C9ED] w-full h-[550px] max-lg:h-[400px]  max-[400px]:h-[320px] ease-linear duration-200 max-2xl:w-[400px] rounded-3xl max-lg:rounded-2xl flex flex-col justify-between gap-10 max-[400px]:gap-2 cursor-pointer items-center py-10 max-lg:py-5">
-                                <div
-                                    className={`bg-[#0c88ad] rounded-full relative ease-in-out duration-200  max-[400px]:h-[120px]  max-[400px]:w-[120px] max-lg:h-[180px]  max-lg:w-[180px] w-[250px] h-[250px] max-xl:w-[230px] max-xl:h-[230px]`}
-                                >
-                                    <Image
-                                        height={300}
-                                        width={340}
-                                        alt=""
-                                        src={"/image/topings/vanilla-toping.webp"}
-                                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[280px] max-lg:h-[200px] max-[400px]:h-[140px] ease-in-out duration-200  -translate-y-1/2`}
-                                    />
-                                </div>
-                                <div className="flex flex-col items-center ga justify-center gap-10">
-                                    <p
-                                        className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl`}
-                                    >
-                                        BLUEBERRY MINT
-                                    </p>
-                                    
-                                    <button
-                                        className={`w-fit bg-[#0c88ad] text-white px-5 py-3 max-lg:py-2 rounded-xl  ease-in-out duration-200  max-md:text-sm  max-lg:text-base text-lg`}
-                                    >
-                                        Buyurtma qilish
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+                        </SwiperSlide>
+                    ))}
+
                     <SwiperSlide></SwiperSlide>
                 </Swiper>
             </motion.div>

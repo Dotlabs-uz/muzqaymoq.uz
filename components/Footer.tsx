@@ -45,7 +45,7 @@ const Footer: React.FC<FooterSectionProps> = () => {
                     width="493"
                     height="244"
                     frameBorder="0"
-                    className="max-xl:w-[350px] max-xl:h-[200px] max-sm:w-[320px]"
+                    className="max-xl:w-[350px] max-xl:h-[200px] max-sm:w-[100%]"
                 ></iframe>
             </div>
         </footer>
