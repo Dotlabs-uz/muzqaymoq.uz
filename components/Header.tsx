@@ -116,8 +116,8 @@ function Header() {
                     </ul>
                     <div>
                         <h1>Контакты</h1>
-                        <a className="text-2xl" href="tel:+998911234567">
-                            +998 91 123 45 67
+                        <a className="text-2xl" href="tel:+998915268088">
+                            +998 (91) 526-80-88
                         </a>
                     </div>
                 </div>

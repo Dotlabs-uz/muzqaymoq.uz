@@ -29,11 +29,11 @@ const Footer: React.FC<FooterSectionProps> = () => {
                 <h3 className="text-2xl">Kontaktlar</h3>
                 <ol className="mt-4">
                     <li>
-                        Samrqand nomer:{" "}
-                        <a href="tel:+998909942345">+998 (90) 994-23-45</a>
+                        Samrqand:{" "}
+                        <a href="tel:+998915268088">+998 (91) 526-80-88</a>
                     </li>
                     <li className="mt-5">
-                        Toshkent nomer:{" "}
+                        Toshkent:{" "}
                         <a href="tel:+998909415757">+998 (90) 941-57-57</a>
                     </li>
                 </ol>

@@ -14,6 +14,11 @@ interface SecondSectionProps {}
 
 const iceCreamArr = [
     {
+        id: 13,
+        src: "/image/iceCreamArrImages/Milc.webp",
+        title:"Sutli",
+    },
+    {
         id: 0,
         src: "/image/iceCreamArrImages/banan.webp",
         title:"Banan ta'mli",

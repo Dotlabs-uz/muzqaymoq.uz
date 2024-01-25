@@ -52,12 +52,12 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     />
 
                     <Image
-                        src={"/image/smes.webp"}
+                        src={"/image/iceCreamArrImages/mmm.webp"}
                         alt=""
-                        width={150}
+                        width={180}
                         height={150}
                         className={
-                            "absolute -bottom-4 left-1/2 -translate-x-1/2 max-[1700px]:w-[100px] max-lg:w-[120px] max-sm:-bottom-5 max-sm:w-[100px] max-[500px]:w-[70px] cursor-pointer"
+                            "absolute -bottom-4 left-1/2 -translate-x-1/2 max-[1700px]:w-[140px] max-2xl:w-[130px] max-xl:w-[110px] max-lg:w-[150px] max-md:w-[120px] max-sm:w-[130px] max-[500px]:w-[80px] max-sm:-bottom-5 cursor-pointer"
                         }
                     />
 
