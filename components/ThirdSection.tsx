@@ -50,7 +50,7 @@ const iceCreamArr = [
     },
     {
         id: 6,
-        src: "/image/iceCreamArrImages/Mango.webp",
+        src: "/image/iceCreamArrImages/mango.webp",
         title: "Mango",
     },
     {
