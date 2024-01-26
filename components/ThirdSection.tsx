@@ -26,12 +26,12 @@ const iceCreamArr = [
     {
         id: 1,
         src: "/image/iceCreamArrImages/Caramel.webp",
-        title: "Caramel ta'mli",
+        title: "Caramel",
     },
     {
         id: 2,
         src: "/image/iceCreamArrImages/choco.webp",
-        title: "Shokolad ta'mli",
+        title: "Shokolad",
     },
     {
         id: 3,
@@ -41,7 +41,7 @@ const iceCreamArr = [
     {
         id: 4,
         src: "/image/iceCreamArrImages/Kiwi.webp",
-        title: "Kiwi ta'mli",
+        title: "Kiwi",
     },
     {
         id: 5,
@@ -51,37 +51,37 @@ const iceCreamArr = [
     {
         id: 6,
         src: "/image/iceCreamArrImages/Mango.webp",
-        title: "Mango ta'mli",
+        title: "Mango",
     },
     {
         id: 7,
         src: "/image/iceCreamArrImages/Nutella.webp",
-        title: "Nutella ta'mli",
+        title: "Nutella",
     },
     {
         id: 8,
         src: "/image/iceCreamArrImages/Qovun.webp",
-        title: "Qovun ta'mli",
+        title: "Qovun",
     },
     {
         id: 9,
         src: "/image/iceCreamArrImages/raffaello.webp",
-        title: "raffaello",
+        title: "Raffaello",
     },
     {
         id: 10,
         src: "/image/iceCreamArrImages/strawberry.webp",
-        title: "Qulupnay ta'mli",
+        title: "Qulupnay",
     },
     {
         id: 11,
         src: "/image/iceCreamArrImages/Tarvuz.webp",
-        title: "Tarbuz ta'mli",
+        title: "Tarbuz",
     },
     {
         id: 12,
         src: "/image/iceCreamArrImages/Vanilla.webp",
-        title: "Vanilla ta'mli",
+        title: "Vanilla",
     },
 ];
 
