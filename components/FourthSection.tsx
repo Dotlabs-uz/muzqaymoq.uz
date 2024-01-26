@@ -2,7 +2,6 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 interface FourthSectionProps {}
@@ -24,7 +23,7 @@ const cardVariants: Variants = {
 
 const FourthSection: React.FC<FourthSectionProps> = () => {
     return (
-        <section className="my-20">
+        <section className="my-20 max-sm:my-5">
             <div className="bg-[#53C9ED] flex max-xl:flex-col justify-center items-center p-20 max-sm:p-16 rounded-[80px] max-md:rounded-[50px] max-sm:rounded-[30px] relative overflow-hidden">
                 <motion.div
                     initial={{ x: "-100%", opacity: 0 }}
@@ -136,7 +135,7 @@ const FourthSection: React.FC<FourthSectionProps> = () => {
                         viewport={{ once: true }}
                         className="text-2xl max-xl:text-xl max-sm:text-base mt-5 font-semibold max-sm:mt-3"
                     >
-                        Hosildorlik - 40-50l / soat <br />
+                        Ishlash quvati - 40-50l / soat <br />
                         Dvigatel quvvati - 4,0 kVt <br />
                         Kuchlanish - 380V - 50Hz - 3 faza
                     </motion.p>

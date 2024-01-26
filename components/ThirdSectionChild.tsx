@@ -16,7 +16,7 @@ const ThirdSectionChild = ({ src, title}: any) => {
                         width={165}
                         alt=""
                         src={src}
-                        className={`absolute top-1/2 left-1/2 -translate-x-1/2  ease-in-out duration-200 max-xl:w-[180px] max-xl:h-[180px] max-lg:w-[130px] max-lg:h-[130px] max-sm:h-[70px] max-sm:w-[70px] -translate-y-1/2`}
+                        className={`absolute top-1/2 left-1/2 -translate-x-1/2  ease-in-out duration-200 max-xl:w-[180px] max-xl:h-[180px] max-lg:w-[130px] max-lg:h-[130px] max-sm:h-[100px] max-sm:w-[100px] -translate-y-1/2`}
                     />
                 </div>
                 <div className="flex flex-col gap-10 max-sm:gap-3 items-center justify-center">

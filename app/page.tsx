@@ -21,22 +21,6 @@ const myFont = SuisseIntl({
     src: "../public/fonts/Suisse Intl/SuisseIntl-Regular.otf",
 });
 
-const scrollToContent = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    contentId: string
-) => {
-    e.preventDefault();
-
-    const content = document.getElementById(contentId);
-    if (content) {
-        content.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "nearest",
-        });
-    }
-};
-
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
 
