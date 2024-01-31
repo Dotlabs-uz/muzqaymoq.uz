@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import { RiHeartsFill } from "react-icons/ri";
 
 interface SecondSectionProps {}
 
@@ -70,6 +71,9 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                             "absolute top-[200px] right-0 max-[1700px]:w-[80px] max-[1700px]:top-[150px] max-xl:w-[70px] max-lg:w-[90px] max-lg:top-[180px] max-md:top-[160px] max-md:w-[80px] max-sm:top-[150px] max-sm:w-[70px] max-[500px]:top-[100px] max-[500px]:w-[40px] cursor-pointer"
                         }
                     />
+
+                    
+                <RiHeartsFill size={150} color="#53C9ED" className="absolute pointer-events-none top-5 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[250px] max-2xl:w-[120px] max-xl:w-[100px] max-lg:w-[110px] max-sm:w-[100px] max-[420px]:w-[70px]"/>
                 </motion.div>
                 <motion.div
                     initial="offscreen"
