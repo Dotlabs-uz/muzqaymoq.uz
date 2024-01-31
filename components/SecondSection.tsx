@@ -43,13 +43,11 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     />
 
                     <Image
-                        src={"/image/topings/rasberry-toping.webp"}
+                        src={"/image/topings/black-toping.webp"}
                         alt=""
-                        width={200}
+                        width={220}
                         height={200}
-                        className={
-                            "absolute top-[200px] -left-14 max-[1700px]:w-[170px] max-[1700px]:top-[150px] max-xl:w-[150px] max-xl:-left-10 max-lg:w-[170px] max-lg:top-[200px] max-md:top-[180px] max-sm:-left-10 max-sm:top-[150px] max-sm:w-[130px] max-sm:h-[130px] max-[500px]:top-[100px] max-[500px]:-left-5 max-[500px]:w-[90px] max-[500px]:h-[90px] cursor-pointer"
-                        }
+                        className={"absolute top-[190px] -left-16 max-[1700px]:w-[170px] max-[1700px]:top-[120px] max-2xl:-left-12  max-xl:w-[150px] max-xl:-left-10 max-lg:w-[200px] max-lg:top-[160px] max-lg:-left-14 max-md:top-[120px] max-sm:-left-10 max-sm:top-[130px] max-sm:w-[150px] max-[500px]:top-[100px] max-[500px]:-left-5 max-[500px]:w-[90px] cursor-pointer"}
                     />
 
                     <Image
