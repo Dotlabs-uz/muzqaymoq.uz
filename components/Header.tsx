@@ -37,7 +37,7 @@ function Header() {
                     width={450}
                     height={350}
                     alt=""
-                    className="max-xl:w-[400px] max-lg:w-[350px] max-sm:w-[250px]"
+                    className="max-xl:w-[400px] max-lg:w-[350px] max-sm:w-[210px]"
                 />
 
                 <nav>
