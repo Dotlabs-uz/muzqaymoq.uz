@@ -43,11 +43,13 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                     />
 
                     <Image
-                        src={"/image/topings/black-toping.webp"}
+                        src={"/image/topings/black-toping.png"}
                         alt=""
                         width={220}
                         height={200}
-                        className={"absolute top-[190px] -left-16 max-[1700px]:w-[170px] max-[1700px]:top-[120px] max-2xl:-left-12  max-xl:w-[150px] max-xl:-left-10 max-lg:w-[200px] max-lg:top-[160px] max-lg:-left-14 max-md:top-[120px] max-sm:-left-10 max-sm:top-[130px] max-sm:w-[150px] max-[500px]:top-[100px] max-[500px]:-left-5 max-[500px]:w-[90px] cursor-pointer"}
+                        className={
+                            "absolute top-[190px] -left-16 max-[1700px]:w-[170px] max-[1700px]:top-[120px] max-2xl:-left-12  max-xl:w-[150px] max-xl:-left-10 max-lg:w-[200px] max-lg:top-[160px] max-lg:-left-14 max-md:top-[100px] max-sm:-left-10 max-sm:top-[130px] max-sm:w-[150px] max-[500px]:top-[110px] max-[500px]:-left-5 max-[500px]:w-[120px] cursor-pointer max-[420px]:w-[90px]"
+                        }
                     />
 
                     <Image
@@ -56,7 +58,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                         width={180}
                         height={150}
                         className={
-                            "absolute -bottom-4 left-1/2 -translate-x-1/2 max-[1700px]:w-[140px] max-2xl:w-[130px] max-xl:w-[110px] max-lg:w-[150px] max-md:w-[120px] max-sm:w-[130px] max-[500px]:w-[80px] max-sm:-bottom-5 cursor-pointer"
+                            "absolute -bottom-4 left-1/2 -translate-x-1/2 max-[1700px]:w-[140px] max-2xl:w-[130px] max-xl:w-[110px] max-lg:w-[150px] max-md:w-[120px] max-sm:w-[130px] max-[500px]:w-[120px] max-sm:-bottom-5 cursor-pointer max-[420px]:w-[100px]"
                         }
                     />
 
@@ -66,12 +68,15 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                         width={110}
                         height={110}
                         className={
-                            "absolute top-[200px] right-0 max-[1700px]:w-[80px] max-[1700px]:top-[150px] max-xl:w-[70px] max-lg:w-[90px] max-lg:top-[180px] max-md:top-[160px] max-md:w-[80px] max-sm:top-[150px] max-sm:w-[70px] max-[500px]:top-[100px] max-[500px]:w-[40px] cursor-pointer"
+                            "absolute top-[200px] right-0 max-[1700px]:w-[80px] max-[1700px]:top-[150px] max-xl:w-[70px] max-lg:w-[90px] max-lg:top-[180px] max-md:top-[160px] max-md:w-[80px] max-sm:top-[150px] max-sm:w-[70px] max-[500px]:top-[100px] max-[500px]:w-[60px] cursor-pointer max-[420px]:w-[50px]"
                         }
                     />
 
-                    
-                <RiHeartsFill size={150} color="#53C9ED" className="absolute pointer-events-none top-5 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[250px] max-2xl:w-[120px] max-xl:w-[100px] max-lg:w-[110px] max-sm:w-[100px] max-[420px]:w-[70px]"/>
+                    <RiHeartsFill
+                        size={150}
+                        color="#F40066"
+                        className="absolute pointer-events-none top-5 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[250px] max-2xl:w-[120px] max-xl:w-[100px] max-lg:w-[110px] max-sm:w-[100px] max-[420px]:w-[70px]"
+                    />
                 </motion.div>
                 <motion.div
                     initial="offscreen"
@@ -93,7 +98,7 @@ const SecondSection: React.FC<SecondSectionProps> = () => {
                 </motion.div>
             </div>
 
-            <p className="text-9xl z-10 text-[#bcbdb7]">=</p>
+            <p className="text-9xl z-10 text-[#53C9ED]">=</p>
 
             <div className="w-full relative">
                 <div className="w-full flex max-lg:gap-40 max-sm:gap-20 items-start max-lg:items-center max-sm:items-start max-lg:translate-y-10 max-lg:h-[700px] max-md:h-[550px] max-sm:h-[300px] justify-between">

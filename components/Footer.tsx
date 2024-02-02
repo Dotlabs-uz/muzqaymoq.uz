@@ -7,7 +7,7 @@ const Footer: React.FC<FooterSectionProps> = () => {
     return (
         <footer
             id="contact"
-            className="flex max-lg:flex-col justify-center max-sm:flex-col gap-32 max-lg:gap-9 bg-[#D0CECC] pt-10 px-20 pb-20 max-sm:px-10 max-sm:pb-10"
+            className="flex max-lg:flex-col justify-center max-sm:flex-col gap-32 max-lg:gap-9 bg-[#53C9ED] pt-10 px-20 pb-20 max-sm:px-10 max-sm:pt-1 max-sm:pb-10"
         >
             <div>
                 <Image

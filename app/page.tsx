@@ -58,7 +58,7 @@ export default function Home() {
                     <Header />
                     <main
                         id="home"
-                        className={`${myFont.className} bg-white overflow-hidden`}
+                        className={`${myFont.className} bg-white overflow-hidden mt-10 max-lg:mt-1`}
                     >
                         <ModalContext.Provider value={{modalHandelFunk}}>
                         <div className="max-w-[1920px] m-auto relative max-2xl:max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px] px-24 max-[1330px]:px-16 max-sm:px-5">

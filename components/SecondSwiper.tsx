@@ -82,7 +82,7 @@ const SecondSwiper: React.FC<SecondSectionProps> = () => {
                                     <p
                                         className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl max-sm:text-sm`}
                                     >
-                                        BLUEBERRY MINT
+                                        KATTA
                                     </p>
 
                                     <button
@@ -113,7 +113,7 @@ const SecondSwiper: React.FC<SecondSectionProps> = () => {
                                     <p
                                         className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl max-sm:text-sm`}
                                     >
-                                        BLUEBERRY MINT
+                                        O'RTA
                                     </p>
 
                                     <button
@@ -144,7 +144,7 @@ const SecondSwiper: React.FC<SecondSectionProps> = () => {
                                     <p
                                         className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl max-sm:text-sm`}
                                     >
-                                        BLUEBERRY MINT
+                                        KICHIK
                                     </p>
 
                                     <button
@@ -175,7 +175,7 @@ const SecondSwiper: React.FC<SecondSectionProps> = () => {
                                     <p
                                         className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl max-sm:text-sm`}
                                     >
-                                        BLUEBERRY MINT
+                                        KONUS
                                     </p>
 
                                     <button
@@ -206,7 +206,7 @@ const SecondSwiper: React.FC<SecondSectionProps> = () => {
                                     <p
                                         className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl max-sm:text-sm`}
                                     >
-                                        BLUEBERRY MINT
+                                        FAKEL
                                     </p>
 
                                     <button
@@ -237,7 +237,7 @@ const SecondSwiper: React.FC<SecondSectionProps> = () => {
                                     <p
                                         className={`font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl max-sm:text-sm`}
                                     >
-                                        BLUEBERRY MINT
+                                        FAKEL
                                     </p>
 
                                     <button

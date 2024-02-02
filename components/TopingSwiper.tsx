@@ -21,22 +21,22 @@ const TopingArr = [
     {
         id: 2,
         src: "/image/topings/mango-toping.webp",
-        title: "Shokolad ta'mli",
+        title: "Mango ta'mli",
     },
     {
         id: 3,
-        src: "/image/topings/maple-toping.webp",
-        title: "Qora shokolad",
+        src: "/image/topings/black-toping.png",
+        title: "Shokoladli",
     },
     {
         id: 4,
         src: "/image/topings/rasberry-toping.webp",
-        title: "Kiwi ta'mli",
+        title: "Qulupnayli",
     },
     {
         id: 5,
         src: "/image/topings/vanilla-toping.webp",
-        title: "Macdonald",
+        title: "McDonald's",
     },
 ];
 
