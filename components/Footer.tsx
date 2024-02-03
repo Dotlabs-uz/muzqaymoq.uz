@@ -22,7 +22,7 @@ const Footer: React.FC<FooterSectionProps> = () => {
             <Image
                     src={"/muzqaymoquz logo+ (2).png"}
                     width={350}
-                    height={200}
+                    height={700}
                     alt=""
                     className="hidden max-2xl:block mb-5"
                 />
