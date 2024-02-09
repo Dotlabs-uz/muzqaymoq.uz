@@ -113,7 +113,7 @@ const SecondSwiper: React.FC<SecondSectionProps> = () => {
                                     <p
                                         className={"font-semibold text-[#0c88ad] text-center w-[90%] ease-in-out duration-200 max-md:text-xl  max-lg:text-2xl text-3xl max-sm:text-sm"}
                                     >
-                                        O"RTA
+                                        ÕRTA
                                     </p>
 
                                     <button
