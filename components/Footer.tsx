@@ -11,7 +11,7 @@ const Footer: React.FC<FooterSectionProps> = () => {
         >
             <div>
                 <Image
-                    src={"/muzqaymoquz logo+ (2).png"}
+                    src={"/muzqaymoquz_logo.png"}
                     width={400}
                     height={200}
                     alt=""
@@ -20,7 +20,7 @@ const Footer: React.FC<FooterSectionProps> = () => {
             </div>
             <div>
             <Image
-                    src={"/muzqaymoquz logo+ (2).png"}
+                    src={"/muzqaymoquz_logo.png"}
                     width={350}
                     height={700}
                     alt=""
