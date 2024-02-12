@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const scrollToContent = (
@@ -21,21 +20,14 @@ const scrollToContent = (
 function Header() {
 
     return (
-        <motion.header
-            initial={{ y: -40 }}
-            animate={{ y: 0 }}
-            transition={{
-                delay: 0,
-                ease: "backOut",
-                duration: 1,
-            }}
+        <header
             className="px-24 max-[1330px]:px-16 max-sm:px-10 z-50 pt-5 pb-5 max-sm:py-4 w-full absolute max-lg:fixed top-0 left-0 bg-white flex items-center justify-between gap-5"
         >
             <div className="flex pr-24 max-[1330px]:pr-0 items-center max-lg:items-end gap-7 w-full justify-between">
                 <Image
-                    src={"/muzqaymoquz logo.png"}
+                    src={"/muzqaymoquz_logo.png"}
                     width={450}
-                    height={350}
+                    height={50}
                     alt=""
                     className="max-xl:w-[400px] max-lg:w-[350px] max-sm:w-[210px]"
                 />
@@ -55,7 +47,7 @@ function Header() {
                     </ul>
                 </nav>
             </div>
-        </motion.header>
+        </header>
     );
 }
 
